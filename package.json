@@ -1,0 +1,37 @@
+{
+  "name": "weblayout_basic_diploma",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbjice/weblayout_basic_diploma.git"
+  },
+  "keywords": [],
+  "author": "Sarkhan Bayramov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbjice/weblayout_basic_diploma/issues"
+  },
+  "homepage": "https://github.com/sbjice/weblayout_basic_diploma#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-format-html": "^1.2.5",
+    "gulp-pug": "^5.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-version-number": "^0.2.4",
+    "gulp-webp-html-nosvg": "^1.1.1"
+  },
+  "dependencies": {
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1"
+  }
+}
