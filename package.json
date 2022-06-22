@@ -36,7 +36,9 @@
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html-nosvg": "^1.1.1",
     "sass": "^1.52.3",
-    "webp-converter": "^2.2.3"
+    "webp-converter": "^2.2.3",
+    "webpack": "^5.73.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "gulp-notify": "^4.0.0",
