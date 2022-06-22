@@ -1,15 +1,12 @@
-import fileinclude from 'gulp-file-include';
-import GulpFormatHtml from 'gulp-format-html';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 import pug from 'gulp-pug';
-
 
 export const pugTask = () => {
     return app.gulp.src(app.path.src.pug)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
-                title: 'HTML',
+                title: 'PUG',
                 message: 'Error: <%= error.message %>'
             })
         ))

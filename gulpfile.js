@@ -9,11 +9,12 @@ global.app = {
     plugins: plugins,
 }
 
-import {copy} from './gulp/tasks/copy.js';
-import {reset} from './gulp/tasks/reset.js'
+import { copy } from './gulp/tasks/copy.js';
+import { reset } from './gulp/tasks/reset.js'
 // import {html} from './gulp/tasks/html.js'
-import {pugTask} from './gulp/tasks/pug.js'
+import { pugTask } from './gulp/tasks/pug.js'
 import { server } from './gulp/tasks/server.js';
+import { scss } from './gulp/tasks/scss.js';
 
 
 
@@ -21,9 +22,11 @@ const watcher = () => {
     gulp.watch(path.watch.files, copy);
     // gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.pug, pugTask);
+    gulp.watch(path.watch.scss, scss);
+
 }
 
-const mainTask = gulp.parallel(copy, pugTask);
+const mainTask = gulp.parallel(copy, pugTask, scss);
 
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
 
