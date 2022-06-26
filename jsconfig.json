@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "esnext", // define to your liking
+      "baseUrl": "./",
+      "paths": {
+        "test/*": ["src/actions/test"],
+        "assets/*": ["src/assets"],
+        "@img": ["src/img"],
+      }
+    },
+    "exclude": ["node_modules"] // Optional
+  }

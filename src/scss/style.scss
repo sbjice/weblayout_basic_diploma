@@ -1,6 +1,6 @@
-body {
-    background-color: #000;
-    main {
-        color: red;
-    }
-}
+@import './_normalize.scss';
+@import './fonts.scss';
+@import './variables.scss';
+@import './tags.scss';
+@import './utils.scss';
+@import './header.scss';

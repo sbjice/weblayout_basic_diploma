@@ -1,0 +1,39 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"console.log": {
+		"scope": "javascript,typescript",
+		"prefix": "clg",
+		"body": [
+			"console.${2|log,dir,error|}(${1:$CLIPBOARD});",
+		],
+		"description": "Log output to console"
+	},
+	"html.nav": {
+		"scope": "html",
+		"prefix": "html_nav",
+		"body": [
+			"<nav class=\"${1:header}__nav\">",
+				"<ul class=\"${1:header}__nav-list\">",
+					"<li class=\"${1:header}__nav-item\"><a tabindex=\"0\" href=\"#\" class=\"${1:header}__nav-link\">$2</a></li>",
+				"</ul>",
+		  	"</nav>",
+		],
+		"description": "Create HTML Nav"
+	},
+	"html.ul": {
+		"scope": "html",
+		"prefix": "html_ul",
+		"body": [
+			"<ul class=\"${1:block}__list\">",
+				"<li class=\"${1:block}__item\">$2</li>",
+			"</ul>",
+		],
+		"description": "Log output to console"
+	},
+}

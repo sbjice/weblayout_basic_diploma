@@ -1,2 +1,2 @@
 // import { sum } from "./modules/functions";
-console.log('log');
+// console.log('log');
