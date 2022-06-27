@@ -5,35 +5,91 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220626200911">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220627221034">
   <title>W-Wave Radio</title>
 </head>
 
 <body class="container">
   <!-- <picture><source srcset="img/photo_2021-11-24-19-12-40.webp" type="image/webp"><img src="img/photo_2021-11-24-19-12-40.jpeg" alt=""></picture> -->
   <header class="header">
-    <a href="#" class="header__logo">
-      <img src="img/header__logo.svg" alt="W-Wave логотип" class="logo-img">
-    </a>
-    <nav class="header__nav">
-      <ul class="header__nav-list">
-        <li class="header__nav-item">
-          <a tabindex="0" href="#" class="header__nav-link">Подкасты</a>
-        </li>
-        <li class="header__nav-item">
-          <a tabindex="0" href="#" class="header__nav-link">Передачи</a>
-        </li>
-        <li class="header__nav-item">
-          <a tabindex="0" href="#" class="header__nav-link">Гости</a>
-        </li>
-        <li class="header__nav-item">
-          <a tabindex="0" href="#" class="header__nav-link">Плейлисты</a>
-        </li>
-        <li class="header__nav-item">
-          <a tabindex="0" href="#" class="header__nav-link">О нас</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header-top__content">
+      <nav class="header-top__nav">
+        <a tabindex="0" href="#" class="header-top__logo header__logo">
+          <img src="img/header__logo.svg" alt="W-Wave логотип" class="logo-img">
+        </a>
+        <ul class="header-top__nav-list">
+          <li class="header-top__nav-item">
+            <a tabindex="0" href="#" class="header-top__nav-link">Подкасты</a>
+          </li>
+          <li class="header-top__nav-item">
+            <a tabindex="0" href="#" class="header-top__nav-link">Передачи</a>
+          </li>
+          <li class="header-top__nav-item">
+            <a tabindex="0" href="#" class="header-top__nav-link">Гости</a>
+          </li>
+          <li class="header-top__nav-item">
+            <a tabindex="0" href="#" class="header-top__nav-link">Плейлисты</a>
+          </li>
+          <li class="header-top__nav-item">
+            <a tabindex="0" href="#" class="header-top__nav-link">О&nbsp;нас</a>
+          </li>
+        </ul>
+        <a tabindex="0" href="#" class="header-top__search">
+          <img src="img/header-top__search.svg" alt="Кнопка поиска" class="search-img">
+        </a>
+        <a tabindex="0" href="#" class="header-top__button">
+          <p class="header-top__button-text">Вход</p>
+        </a>
+      </nav>
+    </div>
+    <div class="header-bottom__content">
+      <nav class="header-bottom__nav">
+        <ul class="header-bottom__nav-list">
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__nav-link">Новости</a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__nav-link">Блоги</a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__nav-link">Топы</a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__nav-link">Опросы</a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__nav-link">Рейтинги</a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__nav-link">Реклама</a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <a tabindex="0" href="#" class="header-bottom__button">
+              <div class="header-bottom__play"></div>
+              <div class="header-bottom__info">
+                <p class="header-bottom__info-time">Ранее в эфире</p>
+                <p class="header-bottom__info-name">«Музыка»</p>
+              </div>
+            </a>
+            <a tabindex="0" href="#" class="header-bottom__button header-button">
+              <div class="header-bottom__play"></div>
+              <div class="header-bottom__info">
+                <p class="header-bottom__info-time">Сейчас в эфире</p>
+                <p class="header-bottom__info-name">«Как так?»</p>
+              </div>
+            </a>
+          </li>
+          <li class="header-bottom__nav-item">
+            <div class="header-bottom__pa">
+              <div class="header-bottom__pa-circle">
+                <p class="header-bottom__pa-text">12+</p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <section>
@@ -46,7 +102,7 @@
   <footer>
 
   </footer>
-  <script src="js/app.min.js?_v=20220626200911"></script>
+  <script src="js/app.min.js?_v=20220627221034"></script>
 </body>
 
 </html>
