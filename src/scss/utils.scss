@@ -1,9 +1,10 @@
 .container {
-    max-width: 1920px;
+    max-width: 1110px;
+    // max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 1455px) {
+    @media (max-width: 1200px) {
         max-width: 100%;
     }
     
