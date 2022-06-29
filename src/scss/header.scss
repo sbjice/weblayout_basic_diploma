@@ -24,12 +24,11 @@
 }
 
 .header-top {
-    &__content {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid $light-color;
-    }
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid $light-color;
+
 
     &__nav {
         display: inline-flex;
@@ -79,12 +78,10 @@
 }
 
 .header-bottom {
-    &__content {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-        border-bottom: 1px solid $light-color;
-    }
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 1px solid $light-color;
 
     &__nav {
         display: inline-flex;

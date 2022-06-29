@@ -50,14 +50,14 @@
     }
 
     &__item:not(:nth-last-child(-n+2)) {
-        margin-bottom: 30px;
+        margin-bottom: 29px;
     }
 
     &__item:nth-last-child(-n+2) {
         margin-bottom: 0;
     }
 
-    &__image-block {
+    &__image {
         position: relative;
         min-width: 112px;
         min-height: 100%;
@@ -71,6 +71,41 @@
     &__image_1 {
         background: transparent no-repeat center center / cover;
         background-image: url("../../img/podcasts__image_1.png");
+    }
+
+    &__image_2 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_2.png");
+    }
+
+    &__image_3 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_3.png");
+    }
+
+    &__image_4 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_4.png");
+    }
+
+    &__image_5 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_5.png");
+    }
+
+    &__image_6 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_6.png");
+    }
+
+    &__image_7 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_7.png");
+    }
+
+    &__image_8 {
+        background: transparent no-repeat center center / cover;
+        background-image: url("../../img/podcasts__image_8.png");
     }
 
     &__date {
