@@ -1,4 +1,5 @@
 @import './_normalize.scss';
+@import './vendors/choices.min.css';
 @import './fonts.scss';
 @import './variables.scss';
 @import './tags.scss';
@@ -8,3 +9,4 @@
 
 @import './sections/hero.scss';
 @import './sections/podcasts.scss';
+@import './sections/broadcasts.scss';
