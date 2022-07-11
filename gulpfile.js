@@ -24,7 +24,7 @@ import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { fonts } from './gulp/tasks/fonts.js';
-import { choices } from './gulp/tasks/choices.js';
+import { vendorsJS } from './gulp/tasks/vendorsJS.js';
 
 
 
@@ -38,7 +38,7 @@ const watcher = () => {
     gulp.watch(path.watch.images, images);
 }
 
-const mainTask = gulp.parallel(copy, scss, js, html, images, fonts, choices);
+const mainTask = gulp.parallel(copy, scss, js, html, images, fonts, vendorsJS);
 
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
 

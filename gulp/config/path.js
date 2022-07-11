@@ -16,7 +16,7 @@ export const path = {
     },
     src: {
         js: `${srcFolder}/js/app.js`,
-        choices: `${srcFolder}/js/choices.min.js`,
+        vendorsJS: `${srcFolder}/js/vendors/*.js`,
         html: `${srcFolder}/*.html`,
         scss: `${srcFolder}/scss/style.scss`,
         pug: `${srcFolder}/*.pug`,
