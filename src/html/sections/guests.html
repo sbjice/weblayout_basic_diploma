@@ -9,7 +9,10 @@
             <div class="guests__left">
                 <ul id="accordion" class="guests__guests-type-list">
                     <li class="guests__guests-type-item">
-                        <h4 class="guests__guests-type-header">Блогеры</h4>
+                        <a class="guests__guests-type-header">
+                            <p class="guests__guests-type-header-text">Блогеры</p>
+                            <span class="guests__guests-type-header-icon"></span>
+                        </a>
                         <ul class="guests__guests-list">
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Сергей Денисов</a></li>
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Матвей Мечников</a></li>
@@ -17,8 +20,8 @@
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Иван Калитников</a></li>
 
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Евгений Войновский</a></li>
-                            <li class="guests__guests-item"><a href="#" class="guests__guest-link">Ольга Мартынова</a></li>
-                            <li class="guests__guests-item"><a href="#" class="guests__guest-link">Дмитрий Михалок</a></li>
+                            <li class="guests__guests-item"><a href="#" class="guests__guest-link" data-path="one">Ольга Мартынова</a></li>
+                            <li class="guests__guests-item"><a href="#" class="guests__guest-link" data-path="two">Дмитрий Михалок</a></li>
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Пётр Пиотровский</a></li>
 
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Олег Свиридовский</a></li>
@@ -31,9 +34,58 @@
                             <li class="guests__guests-item"><a href="#" class="guests__guest-link">Максим Сергеев</a></li>
                         </ul>
                     </li>
+                    <li class="guests__guests-type-item">
+                        <a class="guests__guests-type-header">
+                            <p class="guests__guests-type-header-text">Арт-критики</p>
+                            <span class="guests__guests-type-header-icon"></span>
+                        </a>
+                    </li>
+                    <li class="guests__guests-type-item">
+                        <a class="guests__guests-type-header">
+                            <p class="guests__guests-type-header-text">Художники</p>
+                            <span class="guests__guests-type-header-icon"></span>
+                        </a>
+                    </li>
+                    <li class="guests__guests-type-item">
+                        <a class="guests__guests-type-header">
+                            <p class="guests__guests-type-header-text">Люди науки</p>
+                            <span class="guests__guests-type-header-icon"></span>
+                        </a>
+                    </li>
+                    <li class="guests__guests-type-item">
+                        <a class="guests__guests-type-header">
+                            <p class="guests__guests-type-header-text">Историки</p>
+                            <span class="guests__guests-type-header-icon"></span>
+                        </a>
+                    </li>
+                    <li class="guests__guests-type-item">
+                        <a class="guests__guests-type-header">
+                            <p class="guests__guests-type-header-text">Филологи</p>
+                            <span class="guests__guests-type-header-icon"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="guests__right"></div>
+            <div class="guests__right">
+                <div class="guests__guest-image"></div>
+                <ul class="guests__socials-list hidden" data-target="one">
+                    <li class="guests__socials-item"><a href="#" class="guests__socials-link social-instagram"></a></li>
+                    <li class="guests__socials-item"><a href="#" class="guests__socials-link social-facebook"></a></li>
+                    <li class="guests__socials-item"><a href="#" class="guests__socials-link social-twitter"></a></li>
+                </ul>
+                <h4 class="guests__guest-name hidden" data-target="one">Ольга Мартынова</h4>
+                <p class="guests__guest-description hidden" data-target="one">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты «Коммерсантъ». Ведёт активную блогерскую деятельность как куратор музея «Гараж», коим является с 2016 года.</p>
+                <a href="#" class="guests__guest-air-link hidden" data-target="one">Эфиры с гостем</a>
+
+                <ul class="guests__socials-list hidden" data-target="two">
+                    <li class="guests__socials-item"><a href="#" class="guests__socials-link social-instagram"></a></li>
+                    <li class="guests__socials-item"><a href="#" class="guests__socials-link social-facebook"></a></li>
+                    <li class="guests__socials-item"><a href="#" class="guests__socials-link social-twitter"></a></li>
+                </ul>
+                <h4 class="guests__guest-name hidden" data-target="two">Дмитрий Михалок</h4>
+                <p class="guests__guest-description hidden" data-target="two">Лол, кек, много барабулек</p>
+                <a href="#" class="guests__guest-air-link hidden" data-target="two">Эфиры с гостем</a>
+            </div>
         </div>
     </div>
 

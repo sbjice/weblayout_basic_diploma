@@ -1,0 +1,83 @@
+.ui-state-default {
+    color: $white;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.ui-accordion .ui-accordion-content {
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.ui-widget-content {
+    color: $white;
+    border: none;
+    background: none;
+}
+
+.ui-widget-content a {
+    color: $white;
+}
+
+&__guests-type-header.ui-accordion-header {
+    position: relative;
+    margin: 0;
+    padding: 34px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $primary-light;
+    color: $white;
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+&__guests-type-item:not(:last-child) > &__guests-type-header.ui-accordion-header {
+    border-bottom: none;
+}
+
+&__guests-type-item:not(:last-child) > &__guests-type-header.ui-accordion-header-active {   
+    border-bottom: 1px solid $primary-light;
+}
+
+&__guests-type-item:last-child > &__guests-type-header.ui-accordion-header {
+    border-bottom: 1px solid $primary-light;
+}
+
+&__guests-type-item > &__guests-type-header.ui-accordion-header-active {   
+    border-bottom: 1px solid $primary-light;
+
+}
+
+&__guests-type-header.ui-accordion-header > &__guests-type-header-text{
+    margin: 0;
+}
+
+&__guests-type-header-icon {
+    position: absolute;
+    top: 23px;
+    right: 3px;
+    width: 42px;
+    height: 42px;
+    background: transparent no-repeat right center / 42px 42px;
+    background-image: url("../../img/guests__guests-type-header-icon.svg");
+    transition: transform .3s ease-in-out;
+}
+
+&__guests-type-header.ui-accordion-header-active > &__guests-type-header-icon {
+    transform: rotate(180deg);
+}
+
+&__guest-link.ui-accordion-header  {
+    margin: 0;
+    padding: 0 0;
+}
+
+&__guests-list.ui-accordion-content {
+    margin-right: 0;
+    padding: 27px 0 29px 0;
+}
