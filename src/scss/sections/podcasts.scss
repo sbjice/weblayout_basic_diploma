@@ -42,6 +42,7 @@
         align-items: flex-start;
         width: 540px;
         min-height: 140px;
+        margin-bottom: 0;
         background-color: $white;
     }
 
@@ -49,12 +50,8 @@
         margin-right: 30px;
     }
 
-    &__item:not(:nth-last-child(-n+2)) {
+    &__item-mb {
         margin-bottom: 29px;
-    }
-
-    &__item:nth-last-child(-n+2) {
-        margin-bottom: 0;
     }
 
     &__image {

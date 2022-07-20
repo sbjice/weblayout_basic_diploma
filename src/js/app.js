@@ -31,12 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     podcastsLink.addEventListener('click', event => {
         event.preventDefault();
-        podcastsItems.forEach(item => item.classList.remove('hidden'));
+        podcastsItems.forEach((item, idx, array) => {
+            item.classList.remove('hidden');
+            if (idx <= array.length - 3) item.classList.add('podcasts__item-mb');
+        });
     })
 
 
 
-    
+
 
 
     //  Секция Гостей
@@ -53,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         guestAirLinks.forEach(item => item.classList.add('hidden'));
         guestDescriptions.forEach(item => item.classList.add('hidden'));
     }
-    
+
     guestLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
             guestLinks.forEach(item => {
