@@ -3,6 +3,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const headerSearchButton = document.querySelector(".header-top__search-button");
+    const headerSearchInput = document.querySelector(".header-top__search-input");
+    headerSearchButton.addEventListener('click', function (event) {
+        headerSearchInput.classList.toggle("header-top__search-input_visible");
+        headerSearchInput.classList.toggle("header-top__search-input_hidden");
+
+    });
+
     const element = document.querySelector('.broadcasts__select-element');
 
     const choices = new Choices(element, {
