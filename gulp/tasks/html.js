@@ -18,7 +18,7 @@ export const html = () => {
             'indent_char': ' ',
         }))
         .pipe(app.plugins.replace(/@img\//g, 'img/'))
-        .pipe(webpHtmlNosvg())
+        // .pipe(webpHtmlNosvg())
         .pipe(
             versionNumber({
                 'value': '%DT%',
