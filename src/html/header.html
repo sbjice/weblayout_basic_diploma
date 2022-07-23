@@ -10,10 +10,10 @@
                     <li class="header-top__nav-item"><a tabindex="0" href="#" class="header-top__nav-link">Плейлисты</a></li>
                     <li class="header-top__nav-item"><a tabindex="0" href="#" class="header-top__nav-link">О&nbsp;нас</a></li>
                 </ul>
-                <div class="header-top__search-form">
+                <form class="header-top__search-form">
                     <input type="text" name="" id="header-top__search-input" class="header-top__search-input header-top__search-input_hidden" placeholder="Поиск по сайту">
                     <a tabindex="0" href="#" class="header-top__search-button"><img src="@img/header-top__search-button.svg" alt="Кнопка поиска" class="search-img"></a>
-                </div>
+                </form>
                 <a tabindex="0" href="#" class="header-top__button"><p class="header-top__button-text">Вход</p></a>
             </nav>
         </div>
@@ -28,7 +28,9 @@
                     <li class="header-bottom__nav-item"><a tabindex="0" href="#" class="header-bottom__nav-link">Опросы</a></li>
                     <li class="header-bottom__nav-item"><a tabindex="0" href="#" class="header-bottom__nav-link">Рейтинги</a></li>
                     <li class="header-bottom__nav-item"><a tabindex="0" href="#" class="header-bottom__nav-link">Реклама</a></li>
-                    <li class="header-bottom__nav-item">
+                </ul>
+                <ul class="header-bottom__links-list">
+                    <li class="header-bottom__liks-item">
                         <a tabindex="0" href="#" class="header-bottom__button">
                             <div class="header-bottom__play"></div>
                             <div class="header-bottom__info">
@@ -36,6 +38,8 @@
                                 <p class="header-bottom__info-name">«Музыка»</p>
                             </div>
                         </a>
+                    </li>
+                    <li class="header-bottom__liks-item">
                         <a tabindex="0" href="#" class="header-bottom__button header-button">
                             <div class="header-bottom__play"></div>
                             <div class="header-bottom__info">
@@ -44,14 +48,12 @@
                             </div>
                         </a>
                     </li>
-                    <li class="header-bottom__nav-item">
-                        <div class="header-bottom__pa">
-                            <div class="header-bottom__pa-circle">
-                                <p class="header-bottom__pa-text">12+</p>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
+                <div class="header-bottom__pa">
+                    <div class="header-bottom__pa-circle">
+                        <p class="header-bottom__pa-text">12+</p>
+                    </div>
+                </div>
             </nav>
         </div>
     </div>

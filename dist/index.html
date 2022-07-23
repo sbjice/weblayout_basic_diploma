@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220723134205">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220723174913">
   <title>W-Wave Radio</title>
 </head>
 
@@ -34,12 +34,12 @@
               <a tabindex="0" href="#" class="header-top__nav-link">О&nbsp;нас</a>
             </li>
           </ul>
-          <div class="header-top__search-form">
+          <form class="header-top__search-form">
             <input type="text" name="" id="header-top__search-input" class="header-top__search-input header-top__search-input_hidden" placeholder="Поиск по сайту">
             <a tabindex="0" href="#" class="header-top__search-button">
               <img src="img/header-top__search-button.svg" alt="Кнопка поиска" class="search-img">
             </a>
-          </div>
+          </form>
           <a tabindex="0" href="#" class="header-top__button">
             <p class="header-top__button-text">Вход</p>
           </a>
@@ -68,7 +68,9 @@
             <li class="header-bottom__nav-item">
               <a tabindex="0" href="#" class="header-bottom__nav-link">Реклама</a>
             </li>
-            <li class="header-bottom__nav-item">
+          </ul>
+          <ul class="header-bottom__links-list">
+            <li class="header-bottom__liks-item">
               <a tabindex="0" href="#" class="header-bottom__button">
                 <div class="header-bottom__play"></div>
                 <div class="header-bottom__info">
@@ -76,6 +78,8 @@
                   <p class="header-bottom__info-name">«Музыка»</p>
                 </div>
               </a>
+            </li>
+            <li class="header-bottom__liks-item">
               <a tabindex="0" href="#" class="header-bottom__button header-button">
                 <div class="header-bottom__play"></div>
                 <div class="header-bottom__info">
@@ -84,14 +88,12 @@
                 </div>
               </a>
             </li>
-            <li class="header-bottom__nav-item">
-              <div class="header-bottom__pa">
-                <div class="header-bottom__pa-circle">
-                  <p class="header-bottom__pa-text">12+</p>
-                </div>
-              </div>
-            </li>
           </ul>
+          <div class="header-bottom__pa">
+            <div class="header-bottom__pa-circle">
+              <p class="header-bottom__pa-text">12+</p>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -113,7 +115,7 @@
       <div class="podcasts__content">
         <h2 class="podcasts__header">Подкасты</h2>
         <ul class="podcasts__list">
-          <li class="podcasts__item podcasts__item-mb">
+          <li class="podcasts__item">
             <div class="podcasts__image podcasts__image_1">
               <p class="podcasts__date">14 июня</p>
             </div>
@@ -140,7 +142,7 @@
               </div>
             </div>
           </li>
-          <li class="podcasts__item podcasts__item-mb">
+          <li class="podcasts__item">
             <div class="podcasts__image podcasts__image_2">
               <p class="podcasts__date">11 июня</p>
             </div>
@@ -167,7 +169,7 @@
               </div>
             </div>
           </li>
-          <li class="podcasts__item podcasts__item-mb">
+          <li class="podcasts__item">
             <div class="podcasts__image podcasts__image_3">
               <p class="podcasts__date">8 июня</p>
             </div>
@@ -194,7 +196,7 @@
               </div>
             </div>
           </li>
-          <li class="podcasts__item podcasts__item-mb">
+          <li class="podcasts__item">
             <div class="podcasts__image podcasts__image_4">
               <p class="podcasts__date">5 июня</p>
             </div>
@@ -222,7 +224,7 @@
             </div>
           </li>
 
-          <li class="podcasts__item podcasts__item-mb">
+          <li class="podcasts__item">
             <div class="podcasts__image podcasts__image_5">
               <p class="podcasts__date">2 июня</p>
             </div>
@@ -249,7 +251,7 @@
               </div>
             </div>
           </li>
-          <li class="podcasts__item podcasts__item-mb">
+          <li class="podcasts__item">
             <div class="podcasts__image podcasts__image_6">
               <p class="podcasts__date">28 мая</p>
             </div>
@@ -304,224 +306,6 @@
             </div>
           </li>
           <li class="podcasts__item">
-            <div class="podcasts__image podcasts__image_8">
-              <p class="podcasts__date">18 мая</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">6:55</p>
-                <p class="podcasts__podcast-title">Правила этикета</p>
-                <p class="podcasts__podcast-author">Татьяна Флеганова</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">24</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">54</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">42</p>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_1">
-              <p class="podcasts__date">14 июня</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">15:43</p>
-                <p class="podcasts__podcast-title">Европа. XIX век</p>
-                <p class="podcasts__podcast-author">Дмитрий Гутенберг</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">258</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">104</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">68</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_2">
-              <p class="podcasts__date">11 июня</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">5:32</p>
-                <p class="podcasts__podcast-title">О музыке</p>
-                <p class="podcasts__podcast-author">Дмитрий Гутенберг</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">207</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">34</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">18</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_3">
-              <p class="podcasts__date">8 июня</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">8:54</p>
-                <p class="podcasts__podcast-title">Люди сегодня</p>
-                <p class="podcasts__podcast-author">Анна Васильева</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">104</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">54</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">42</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_4">
-              <p class="podcasts__date">5 июня</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">9:04</p>
-                <p class="podcasts__podcast-title">Хэллоу, Африка!</p>
-                <p class="podcasts__podcast-author">Пётр Дмитриевский</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">87</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">44</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">5</p>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_5">
-              <p class="podcasts__date">2 июня</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">7:03</p>
-                <p class="podcasts__podcast-title">Обо всём</p>
-                <p class="podcasts__podcast-author">Пётр Дмитриевский</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">64</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">30</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">8</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_6">
-              <p class="podcasts__date">28 мая</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">9:15</p>
-                <p class="podcasts__podcast-title">Физика цвета</p>
-                <p class="podcasts__podcast-author">Татьяна Флеганова</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">58</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">29</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">14</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="podcasts__item hidden">
-            <div class="podcasts__image podcasts__image_7">
-              <p class="podcasts__date">22 мая</p>
-            </div>
-            <div class="podcasts__podcast">
-              <div class="podcasts__podcast-content">
-                <p class="podcasts__podcast-time">16:04</p>
-                <p class="podcasts__podcast-title">Источник звука</p>
-                <p class="podcasts__podcast-author">Пётр Дмитриевский</p>
-                <a tabindex="0" href="#" class="podcasts__podcast-play"></a>
-              </div>
-              <div class="podcasts__podcast-stats">
-                <div class="podcasts__podcast-plays">
-                  <div class="podcasts__podcast-plays-icon"></div>
-                  <p class="podcasts__podcast-text">55</p>
-                </div>
-                <div class="podcasts__podcast-likes">
-                  <div class="podcasts__podcast-likes-icon"></div>
-                  <p class="podcasts__podcast-text">20</p>
-                </div>
-                <div class="podcasts__podcast-shares">
-                  <div class="podcasts__podcast-shares-icon"></div>
-                  <p class="podcasts__podcast-text">12</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="podcasts__item hidden">
             <div class="podcasts__image podcasts__image_8">
               <p class="podcasts__date">18 мая</p>
             </div>
@@ -993,10 +777,10 @@
   <footer>
 
   </footer>
-  <script defer src="js/choices.min.js?_v=20220723134205"></script>
-  <script defer src="js/jquery.min.js?_v=20220723134205"></script>
-  <script defer src="js/jquery-ui.min.js?_v=20220723134205"></script>
-  <script defer src="js/app.min.js?_v=20220723134205"></script>
+  <script defer src="js/choices.min.js?_v=20220723174913"></script>
+  <script defer src="js/jquery.min.js?_v=20220723174913"></script>
+  <script defer src="js/jquery-ui.min.js?_v=20220723174913"></script>
+  <script defer src="js/app.min.js?_v=20220723174913"></script>
 </body>
 
 </html>

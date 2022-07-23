@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const element = document.querySelector('.broadcasts__select-element');
 
     const choices = new Choices(element, {
-        //   placeholderValue: "Материал",
         searchEnabled: false,
         itemSelectText: '',
         shouldSort: false,
@@ -35,14 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
     //  Секция Подкастов
 
     const podcastsLink = document.querySelector('.podcasts__link');
+    const podcastsList = document.querySelector('.podcasts__list');
     const podcastsItems = document.querySelectorAll('.podcasts__item');
+    let copied = false;
 
     podcastsLink.addEventListener('click', event => {
-        event.preventDefault();
-        podcastsItems.forEach((item, idx, array) => {
-            item.classList.remove('hidden');
-            if (idx <= array.length - 3) item.classList.add('podcasts__item-mb');
-        });
+        if (!copied) {
+            event.preventDefault();
+            // podcastsItems.forEach((item, idx, array) => {
+            //     item.classList.remove('hidden');
+            //     if (idx <= array.length - 3) item.classList.add('podcasts__item-mb');
+            // });
+    
+            podcastsItems.forEach(item=> {
+                const elem = item.cloneNode(true);
+                podcastsList.append(elem);
+            });
+        }
+        copied = true;
+
     })
 
 

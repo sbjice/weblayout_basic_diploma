@@ -46,12 +46,12 @@
         background-color: $white;
     }
 
-    &__item:nth-child(2n-1) {
-        margin-right: 30px;
+    &__item:not(:nth-last-child(-n+2)) {
+        margin-bottom: 29px;
     }
 
-    &__item-mb {
-        margin-bottom: 29px;
+    &__item:nth-child(2n-1) {
+        margin-right: 30px;
     }
 
     &__image {
