@@ -76,22 +76,19 @@
         display: flex;
         flex: 0 1 40%;
         max-width: 800px;
-        min-height: 109px;
+        max-height: 109px;
     }
 
     &__links-list {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
     }
 
-    &__links-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
 
     &__links-row:not(:last-child) {
         margin-right: 109px;
