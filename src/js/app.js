@@ -41,11 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     podcastsLink.addEventListener('click', event => {
         if (!copied) {
             event.preventDefault();
-            // podcastsItems.forEach((item, idx, array) => {
-            //     item.classList.remove('hidden');
-            //     if (idx <= array.length - 3) item.classList.add('podcasts__item-mb');
-            // });
-    
             podcastsItems.forEach(item=> {
                 const elem = item.cloneNode(true);
                 podcastsList.append(elem);
