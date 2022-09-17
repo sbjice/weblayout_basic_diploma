@@ -133,7 +133,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        width: 1110px;
+        // width: 1110px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -144,6 +144,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-right: 54px;
         padding: 0;
         font-family: 'Muller', sans-serif;
         font-size: 16px;
@@ -157,13 +158,13 @@
     }
 
     &__nav-item:not(:last-child){
-        margin-right: 52.8px;
+        margin-right: 52px;
     };
 
     &__links-list {
         display: flex;
         flex-direction: row;
-
+        margin-right: 50px;
     }
 
     &__button {
