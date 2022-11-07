@@ -21,3 +21,7 @@ a {
     color: $black;
     display: inline-flex;
 }
+
+h2, h3 {
+    overflow-wrap: anywhere;
+}

@@ -41,6 +41,7 @@
     &__header {
         margin: 0;
         margin-bottom: 14px;
+        max-width: 255px;
         color: $project-black;
         font-family: 'Muller';
         font-style: normal;
@@ -50,8 +51,10 @@
     }
 
     &__label {
+        overflow-wrap: anywhere;
         margin: 0;
         margin-bottom: 9px;
+        max-width: 255px;
         color: $text-gray;
         font-family: 'Muller';
         font-style: normal;
@@ -95,6 +98,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
 
     &__mic-image {
@@ -109,6 +113,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        max-width: 100%;
         margin-bottom: 11px;
         padding: 9px 43px;
         border: 2px solid $project-black;
@@ -117,7 +122,7 @@
 
     &__link-icon {
         height: 18px;
-        width: 18px;
+        min-width: 18px;
         margin-right: 4px;
         background: transparent no-repeat center center / cover;
         background-image: url("../../img/broadcasts__link-icon.svg");
@@ -125,6 +130,7 @@
 
     &__link-text {
         margin: 0;
+        max-width: 225px;
         color: $project-black;
         font-family: 'Muller';
         font-style: normal;
@@ -170,11 +176,15 @@
         background-color: $white;
     }
 
+    &__item:not(:nth-child(n+4)) {
+        margin-bottom: 30px;
+    }
+
 
     &__item-image {
         display: inline-flex;
         width: 255px;
-        height: 148px;
+        min-height: 148px;
     }
 
     &__item-image_1 {
@@ -211,6 +221,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        height: 100%;
         width: 100%;
         padding: 19px 0 20px 16px;
         border: 1px solid $light-color;
@@ -218,6 +229,7 @@
     }
 
     &__item-title {
+        max-width: 225px;
         margin: 0;
         margin-bottom: 4px;
         font-family: 'Muller';
@@ -229,6 +241,7 @@
     }
 
     &__item-description {
+        max-width: 225px;
         margin: 0;
         margin-bottom: 20px;
         font-family: 'Muller';
@@ -244,6 +257,7 @@
         flex-direction: row;
         align-items: center;
         margin: 0;
+        // margin-top: auto;
     }
 
     &__item-link-text {
