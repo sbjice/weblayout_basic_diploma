@@ -24,7 +24,7 @@
         position: relative;
         display: flex;
         align-items: flex-start;
-        flex: 50% 1 1;
+        flex: 72% 1 1;
         margin: 10px 29px 0 -5px;
     }
 
@@ -107,8 +107,9 @@
     &__shop-link {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        max-width: 302px;
         padding: 23px 12.5px;
-
         border: 2px solid $promo-color;
         border-radius: 100px;
     }
@@ -122,7 +123,9 @@
     }
 
     &__shop-link-text {
+        overflow-wrap: anywhere;
         margin: 0;
+        max-width: 245px;
         color: $promo-color;
         font-family: 'Muller';
         font-style: normal;

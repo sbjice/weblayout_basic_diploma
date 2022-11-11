@@ -90,6 +90,8 @@
     }
 
     &__genres-label {
+        overflow-wrap: anywhere;
+        max-width: 300px;
         color: $project-black;
         font-family: 'Muller';
         font-style: normal;
@@ -129,7 +131,7 @@
     &__right {
         display: flex;
         max-width: 730px;
-        min-height: 732px;
+        // min-height: 732px;
         width: 100%;
         margin-top: 18px;
     }
@@ -139,14 +141,15 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: flex-start;
-        align-content: space-evenly;
+        align-content: space-between;
         width: 100%;
+        height: 100%;
     }
 
     &__playlist-item {
         display: flex;
         flex-direction: column;
+        position: relative;
         max-width: 160px;
     }
 
@@ -239,11 +242,14 @@
         display: flex;
         flex-direction: column;
         // justify-content: space-between;
+        width: 100%;
+        height: 100%;
         padding: 13px 16px 17px 16px;
         border: 1px solid $light-color;
     }
 
     &__playlist-title {
+        max-width: 128px;
         margin: 0;
         margin-bottom: 4px;
         font-family: 'Muller';
@@ -255,6 +261,7 @@
     }
 
     &__playlist-description {
+        max-width: 128px;
         margin: 0;
         font-family: 'Muller';
         font-style: normal;

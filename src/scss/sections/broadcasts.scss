@@ -129,6 +129,7 @@
     }
 
     &__link-text {
+        overflow-wrap: anywhere;
         margin: 0;
         max-width: 225px;
         color: $project-black;

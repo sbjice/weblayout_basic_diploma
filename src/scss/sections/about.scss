@@ -100,6 +100,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 30px;
         margin-bottom: 30px;
         padding: 0;
     }
@@ -120,6 +121,7 @@
     &__hosts-name {
         margin: 0;
         margin-bottom: 8px;
+        max-width: 255px;
         color: $white;
         font-family: 'Muller';
         font-style: normal;
@@ -130,6 +132,7 @@
 
     &__hosts-description {
         margin: 0;
+        max-width: 255px;
         color: $text-gray;
         font-family: 'Muller';
         font-style: normal;
@@ -165,6 +168,8 @@
         border: 1px solid $white;
         border-radius: 30px;
         background-color: transparent;
+        color: $white;
+
     }
 
     &__form-textarea::placeholder {
@@ -190,6 +195,7 @@
         border: 1px solid $white;
         border-radius: 40px;
         background-color: transparent;
+        color: $white;
     }
 
     &__form-name-input::placeholder, &__form-email-input::placeholder {
@@ -235,9 +241,7 @@
     }
 
     &__form-checkbox {
-        // display: none;
         cursor: pointer;
-
         opacity: 0;
         z-index: 10;
         margin-right: 8px;
@@ -248,7 +252,9 @@
 
     &__form-span{
         position: absolute;
+        top: 0;
         bottom: 0;
+        margin: auto;
         left: 0;
         width: 14px;
         height: 14px;
@@ -273,6 +279,8 @@
 
     &__form-label-text {
         margin: 0;
+        display: flex;
+        align-items: center;
     }
 
 }
