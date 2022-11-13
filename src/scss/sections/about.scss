@@ -119,6 +119,7 @@
     }
 
     &__hosts-name {
+        overflow-wrap: anywhere;
         margin: 0;
         margin-bottom: 8px;
         max-width: 255px;

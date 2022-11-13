@@ -13,10 +13,11 @@
         flex-direction: row;
         justify-content: space-between;
         min-height: 100%;
-        width: 1110px;
+        max-width: 1110px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 80px;
+        margin-bottom: 94px;
     }
 
     &__left {
@@ -26,7 +27,6 @@
         align-items: flex-start;
         justify-content: center;
         flex: 0 1 20%;
-        // margin-top: 5px;
     }
 
     &__logo {
@@ -75,24 +75,15 @@
 
     &__right {
         display: flex;
-        flex: 0 1 40%;
-        max-width: 445px;
-        // max-width: 800px;
-        height: 100px;
+        flex: 0 1 41%;
     }
 
     &__links-list {
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-between;
-        // align-content: space-between;
-        // align-items: flex-start;
-        flex-basis: 40%;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(3,auto);
         gap: 20px 110px;
-        max-width: 445px;
-        width: 100%;
-        height: 100%;
+        margin-left: 8px;
     }
 
 
@@ -101,11 +92,11 @@
     }
 
     &__links-item {
-        // height: 100%;
-        // max-width: 90px;
+        max-width: 86px;
     }
 
     &__links-link {
+        overflow-wrap: anywhere;
         display: block;
         color: $white;
         font-family: 'Muller';
