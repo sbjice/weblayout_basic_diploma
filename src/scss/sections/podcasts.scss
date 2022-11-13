@@ -6,6 +6,10 @@
     min-height: 1046px;
     padding: 92px 0;
 
+    @media (max-width: 1200px) {
+        padding: 94px 100px 92px;
+    }
+
     background-color: $bg-gray;
 
     &__content {
@@ -16,6 +20,10 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+
+        @media (max-width: 1200px) {
+            // padding: 94px 100px 92px;
+        }
     }
 
     &__header {
@@ -36,6 +44,10 @@
         gap: 30px 30px;
         margin-bottom: 58px;
         padding: 0;
+
+        @media (max-width: 1200px) {
+            gap: 29px 30px;
+        }
     }
 
     &__item {
@@ -43,20 +55,10 @@
         flex-direction: row;
         align-items: flex-start;
         flex: 1 1 48%;
-        // max-width: 48.5%;
-        // width: 100%;
         min-height: 140px;
         margin-bottom: 0;
         background-color: $white;
     }
-
-    // &__item:not(:nth-last-child(-n+2)) {
-    //     margin-bottom: 29px;
-    // }
-
-    // &__item:nth-child(2n-1) {
-    //     margin-right: 30px;
-    // }
 
     &__image {
         position: relative;
@@ -133,7 +135,14 @@
         flex-direction: column;
         flex: auto;
         justify-content: space-between;
-        // flex: 1 1 auto;
+        height: 100%;
+    }
+
+    &__podcast-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 24px 30px;
         height: 100%;
     }
 
@@ -143,21 +152,23 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        justify-content: center;
+
         width: 100%;
-        padding: 24px 0 24px 30px;
+
+        @media (max-width: 1200px) {
+            
+        }
     }
 
     &__podcast-play {
         display: inline-flex;
         display: flex;
         align-self: center;
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
         width: 48px;
+        min-width: 48px;
         height: 48px;
-        margin: 31px 31px 0 0;
+        min-height: 48px;
         background: transparent no-repeat center center / contain;
         background-image: url("../../img/podcasts__podcast-play-icon.svg");
     }
@@ -174,6 +185,7 @@
     }
 
     &__podcast-title {
+        overflow-wrap: anywhere;
         max-width: 200px;
         margin: 0;
         margin-bottom: 4px;
@@ -183,9 +195,14 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 20px;
+
+        @media (max-width: 1200px) {
+            // margin-bottom: 3px;
+        }
     }
 
     &__podcast-author {
+        overflow-wrap: anywhere;
         max-width: 200px;
         margin: 0;
         color: $text-gray;
@@ -199,7 +216,6 @@
     &__podcast-stats {
         display: flex;
         flex-direction: row;
-        // flex: auto;
         padding: 8px 0 8px 30px;
         border-top: 1px solid $light-color;
 

@@ -246,6 +246,7 @@
         margin-right: 50px;
 
         @media (max-width: 1200px) {
+            // flex-wrap: wrap;
             margin-right: 0;
         }
     }
