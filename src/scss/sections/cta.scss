@@ -7,12 +7,18 @@
     min-height: 751px;
     padding: 91px 0 135px 0;
 
+    @media (max-width: 1200px) {
+        padding: 90px 100px 95px;
+    }
+
+
     background-color: $light-black;
 
     &__content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 30px;
         min-height: 100%;
         max-width: 1110px;
         width: auto;
@@ -21,16 +27,31 @@
     }
 
     &__left {
-        position: relative;
         display: flex;
         align-items: flex-start;
-        flex: 72% 1 1;
-        margin: 10px 29px 0 -5px;
+        flex: 1 1 72%; 
+        
+        @media (max-width: 1200px) {
+            flex: auto;
+            align-items: center;
+        }
+    }
+
+    &__left-box {
+        position: relative;
+
+        @media (max-width: 1200px) {
+            margin-top: -30px;
+        }
     }
 
     &__image {
         max-width: 640px;
         width: 100%;
+
+        @media (max-width: 1200px) {
+            max-width: 410px;
+        }
     }
 
     &__label {
@@ -41,13 +62,19 @@
         height: 160px;
         background: transparent no-repeat center center / 160px 160px;
         background-image: url("../../img/cta__label.svg");
+
+        @media (max-width: 1200px) {
+            width: 100px;
+            height: 100px;
+            background: transparent no-repeat center center / 100px 100px;
+        }
     }
 
     &__right {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        flex: 50% 1 1;
+        flex: 1 1 50%;
     }
 
     &__header {
@@ -68,6 +95,16 @@
         margin-bottom: 16px;
         background: transparent no-repeat center center / 447px 12px;
         background-image: url("../../img/cta__curve.svg");
+
+        @media (max-width: 1200px) {
+            max-width: 396px;
+            // transform: rotate(180deg);
+        background: transparent no-repeat center center / 395px 120px;
+
+        background-image: url("../../img/cta__curve_tablet.svg");
+
+
+        }
     }
 
     &__text {
@@ -78,6 +115,10 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 29px;        
+
+        @media (max-width: 1200px) {
+            max-width: 375px;
+        }
     }
 
     &__text:nth-of-type(1) {
