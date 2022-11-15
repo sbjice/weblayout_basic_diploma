@@ -25,3 +25,7 @@ a {
 h2, h3 {
     overflow-wrap: anywhere;
 }
+
+img, source {
+    display: inline-block;
+}
