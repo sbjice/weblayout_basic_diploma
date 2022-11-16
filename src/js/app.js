@@ -105,4 +105,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     guestLinks[5].click();
 
+
+    // Показ/скрытие меню по нажатию на бургер
+    const burgerButton = document.querySelector('.header-top__burger-button');
+    const headerTopNavList = document.querySelector('.header-top__nav-list');
+    burgerButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        headerTopNavList.classList.toggle('header-top__nav-list_visible');
+        burgerButton.classList.toggle('header-top__burger-button_active')
+    });
+
+    const playerButton = document.querySelector('.header-bottom__links-mock');
+    const playerList = document.querySelector('.header-bottom__links-list');
+    playerButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        playerList.classList.toggle('header-bottom__links-list_visible');
+        // burgerButton.classList.toggle('header-top__burger-button_active')
+    });
+
 });
