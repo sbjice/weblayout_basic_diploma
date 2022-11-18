@@ -5,6 +5,7 @@
     width: 100%;
     min-height: 1046px;
     padding: 92px 0;
+    background-color: $bg-gray;
 
     @media (max-width: 1200px) {
         padding: 94px 100px 92px;
@@ -14,7 +15,6 @@
         padding: 90px 114px;
     }
 
-    background-color: $bg-gray;
 
     &__content {
         display: flex;

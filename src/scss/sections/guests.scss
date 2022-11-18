@@ -151,11 +151,17 @@
             max-width: 255px;
             min-height: 159px;
             background: transparent no-repeat right center / 255px 159px;
+            background-image: url("../../img/guests__guest-card-image-mock.png");
         }
     }
 
     &__guest-image_one {
         background-image: url("../../img/guests__guest-card-image_1.png");
+
+        @media (max-width: 1200px) {
+            background-image: url("../../img/guests__guest-card-image_1.png");
+
+        }
     }
 
 
