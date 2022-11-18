@@ -6,6 +6,10 @@
     width: 100%;
     padding: 94px 0 10px 0;
 
+    @media (max-width: 1020px) {
+        padding: 94px 0 10px;
+    }
+
     background-color: $light-black;
 
     &__content {
@@ -22,6 +26,14 @@
         @media (max-width: 1200px) {
             padding: 0 100px 0;
         }
+
+        @media (max-width: 1020px) {
+            gap: 74px;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0 0 80px;
+        }
     }
 
     &__left {
@@ -35,6 +47,13 @@
         @media (max-width: 1200px) {
             flex: 0 1 25%;
 
+        }
+
+        @media (max-width: 1020px) {   
+            flex: 1 1 auto;     
+            align-self: auto;
+            align-items: center;
+            margin-left: -9px;
         }
     }
 
@@ -53,17 +72,32 @@
         justify-content: space-between;
         max-width: 159px;
         width: 100%;
+
+        @media (max-width: 1020px) {
+            gap: 21px;
+            max-width: 207px;
+        }
     }
 
     &__socials-item {
         height: 100%;
         width: 24px;
+
+        @media (max-width: 1020px) {
+            width: 36px;
+        }
     }
 
     &__socials-link {
         height: 24px;
         width: 24px;
         background: transparent no-repeat right center / 24px 24px;
+
+        @media (max-width: 1020px) {
+            height: 36px;
+            width: 36px;
+            background: transparent no-repeat right center / 36px 36px;
+        }
     }
 
     .social-youtube {
@@ -90,7 +124,11 @@
             flex: 0 1 450px;
             margin-top: -2px;
             margin-right: -7px;
+        }
 
+        @media (max-width: 1200px) {
+            flex: 1 1 auto;
+            margin: 0 auto 0;
         }
     }
 
@@ -105,7 +143,11 @@
         @media (max-width: 1200px) {
             margin-left: 0;
             gap: 20px 105px;
+        }
 
+        @media (max-width: 1200px) {
+            align-content: start;
+            gap: 30px 156px;
         }
     }
 
@@ -130,6 +172,10 @@
         margin-bottom: 9px;
         background: transparent no-repeat center center / cover;
         background-image: url("../../img/footer__border.svg");
+
+        @media (max-width: 1020px) {
+            transform: scaleX(1.012);
+        }
     }
 
     &__copyright {
