@@ -11,6 +11,10 @@
         padding: 90px 100px;
     }
 
+    @media (max-width: 1020px) {
+        padding: 90px 114px 94px;
+    }
+
     background-color: $project-black;
 
     &__content {
@@ -75,6 +79,10 @@
         justify-content: space-between;
         gap: 30px;
         width: 100%;
+
+        @media (max-width: 1020px) {        
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -83,8 +91,9 @@
         max-width: 730px;
         width: 100%;
 
-        @media (max-width: 1200px) {
-            // max-width: 540px;
+        @media (max-width: 1020px) {
+            margin-bottom: 20px;
+            
         }
     }
 
@@ -108,10 +117,10 @@
             grid-template-columns: repeat(3, auto);
 
         }
-    }
 
-    &__guests-item {
-        // width: 160px;
+        @media (max-width: 1020px) {
+            gap: 25px 32px;
+        }
     }
 
     &__guest-link {
@@ -136,6 +145,10 @@
         @media (max-width: 1200px) {
             max-width: 255px;
         }
+        
+        @media (max-width: 1020px) {
+            max-width: none;
+        }
     }
 
     &__guest-image {
@@ -153,6 +166,13 @@
             background: transparent no-repeat right center / 255px 159px;
             background-image: url("../../img/guests__guest-card-image-mock.png");
         }
+
+        @media (max-width: 1020px) {
+            max-width: none;
+            min-height: 220px;
+            background: transparent no-repeat right center / 540px 220px;
+            background-image: url("../../img/guests__guest-card-image-mock_768.png");
+        }
     }
 
     &__guest-image_one {
@@ -160,7 +180,10 @@
 
         @media (max-width: 1200px) {
             background-image: url("../../img/guests__guest-card-image_1.png");
+        }
 
+        @media (max-width: 1020px) {
+            background-image: url("../../img/guests__guest-card-image_1_768.png");
         }
     }
 
@@ -220,8 +243,10 @@
 
         @media (max-width: 1200px) {
             max-width: 255px;
-            // min-height: 159px;
-            // background: transparent no-repeat right center / 255px 159px;
+        }
+
+        @media (max-width: 1020px) {
+            max-width: 396px;
         }
     }
 
