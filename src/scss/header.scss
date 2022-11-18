@@ -149,6 +149,7 @@
         }
 
         @media (max-width: 1020px) {
+            visibility: hidden;
             display: grid;
             grid-template-columns: repeat(2, auto);
             // align-content: start;
@@ -165,8 +166,6 @@
             padding: 106px 114px;
             transform: translateY(-500px);
             transition: height .3s ease-in-out, transform .3s ease-in-out;
-            background-color: $shade-gray;   
-
             background: $shade-gray no-repeat right 114px center / 256px 501px;
             background-image: url("../img/header__bg.svg");
         }
@@ -176,6 +175,7 @@
 
     &__nav-list_visible {
         @media (max-width: 1020px) {
+            visibility: visible;
             transform: translateY(0);
             line-height: 20px;
             overflow:auto;

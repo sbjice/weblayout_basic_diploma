@@ -22,7 +22,6 @@ export const scss = () => {
         .pipe(sass({
             outputStyle: 'expanded',
         }))
-        .pipe(groupCssMediaQueries())
         .pipe(webpcss({
             webpClass: '.webp',
             noWebpClass: '.no-webp',
@@ -32,6 +31,7 @@ export const scss = () => {
             overrideBrowsersList: ['last 4 versions'],
             cascade: true,
         }))
+        .pipe(groupCssMediaQueries())
         .pipe(cleanCss())
         .pipe(rename({
             extname: '.min.css',

@@ -10,6 +10,10 @@
         padding: 94px 100px 92px;
     }
 
+    @media (max-width: 1020px) {
+        padding: 90px 114px;
+    }
+
     background-color: $bg-gray;
 
     &__content {
@@ -22,7 +26,6 @@
         margin-right: auto;
 
         @media (max-width: 1200px) {
-            // padding: 94px 100px 92px;
             margin-left: 0;
             margin-right: 0;
         }
@@ -60,6 +63,10 @@
         min-height: 140px;
         margin-bottom: 0;
         background-color: $white;
+
+        @media (max-width: 1020px) {
+            flex: 1 1 100%;
+        }
     }
 
     &__image {
