@@ -12,7 +12,7 @@
     }
 
     @media (max-width: 1020px) {
-        padding: 94px 0;
+        padding: 90px 114px 94px;
     }
 
     background-color: $project-black;
@@ -56,7 +56,7 @@
         }
 
         @media (max-width: 1020px) {
-            margin: 0 114px 30px;
+            margin-bottom: 31px;
             flex: 1 1 auto;
         }
     }
@@ -108,6 +108,13 @@
             margin: 0;
             height: 100%;
         }
+
+        @media (max-width: 1020px) {
+            position: relative;
+            align-self: flex-end;
+            flex: 1 1 auto;
+            // margin: 0 114px;
+        }
     }
 
     &__top-spiral {
@@ -121,8 +128,9 @@
         }
 
         @media (max-width: 1020px) {
+            position: absolute;
             display: inline-flex;
-            margin-left: -62px;
+            left: -605px;
             width: 639px;
             height: 112px;
             background: transparent no-repeat left center / 639px 112px;
@@ -138,12 +146,11 @@
         background-image: url("../../img/about__top-star.svg");
 
         @media (max-width: 1200px) {
-            align-self:center;
+            align-self: center;
         }
 
         @media (max-width: 1020px) {
-            display: inline-flex;
-            margin-left: -35px;
+            align-self: flex-end;
             width: 112px;
             height: 112px;
             background: transparent no-repeat center center / 112px 112px;
@@ -172,7 +179,7 @@
         }
 
         @media (max-width: 1020px) {   
-            margin: 0 114px 30px;
+            // margin: 0 114px 30px;
         }
     }
 
@@ -243,7 +250,7 @@
         flex-direction: column;
 
         @media (max-width: 1020px) {   
-            margin: 0 114px;
+            // margin: 0 114px;
         }
     }
 
