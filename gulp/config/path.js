@@ -25,7 +25,7 @@ export const path = {
         fonts: `${srcFolder}/fonts/*.*`,
     },
     watch: {
-        js: `${buildFolder}/js/**/*.js`,
+        js: `${srcFolder}/js/**/*.js`,
         html: `${srcFolder}/**/*.html`,
         scss: `${srcFolder}/scss/**/*.*`,
         pug: `${srcFolder}/**/*.pug`,

@@ -3,11 +3,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const headerSearchButton = document.querySelector(".header-top__search-button");
-    const headerSearchInput = document.querySelector(".header-top__search-input");
+    const headerSearchButton = document.querySelector(".header__search-button");
+    const headerSearchInput = document.querySelector(".header__search-input");
     headerSearchButton.addEventListener('click', function (event) {
-        headerSearchInput.classList.toggle("header-top__search-input_visible");
-        headerSearchInput.classList.toggle("header-top__search-input_hidden");
+        headerSearchInput.classList.toggle("header__search-input_visible");
+        headerSearchInput.classList.toggle("header__search-input_hidden");
 
     });
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             event.currentTarget.classList.add('guests__guest-link_active');
             const path = event.currentTarget.dataset.path;
-            console.log(path);
+            // console.log(path);
 
             const guestImage = document.querySelector('.guests__guest-image');
             guestImage.classList = ['guests__guest-image'];
@@ -107,20 +107,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Показ/скрытие меню по нажатию на бургер
-    const burgerButton = document.querySelector('.header-top__burger-button');
-    const headerTopNavList = document.querySelector('.header-top__nav-list');
+    const burgerButton = document.querySelector('.header__burger-button');
+    const headerTopNavList = document.querySelector('.header__nav-list-top');
+    const headerBottomNavList = document.querySelector('.header__nav-list-bottom');
+
     burgerButton.addEventListener('click', (e) => {
         e.preventDefault();
-        headerTopNavList.classList.toggle('header-top__nav-list_visible');
-        burgerButton.classList.toggle('header-top__burger-button_active')
+        headerTopNavList.classList.toggle('header__nav-list-top_visible');
+        headerBottomNavList.classList.toggle('header__nav-list-bottom_visible');
+        burgerButton.classList.toggle('header__burger-button_active');
     });
 
-    const playerButton = document.querySelector('.header-bottom__links-mock');
-    const playerList = document.querySelector('.header-bottom__links-list');
+    const playerButton = document.querySelector('.header__links-mock');
+    const playerList = document.querySelector('.header__links-list');
+    const logo = document.querySelector('.header__logo');
+
+    console.log(playerList);
     playerButton.addEventListener('click', (e) => {
         e.preventDefault();
-        playerList.classList.toggle('header-bottom__links-list_visible');
-        // burgerButton.classList.toggle('header-top__burger-button_active')
+        console.log('player button clicked');
+        playerList.classList.toggle('header__links-list_visible');
+        logo.classList.toggle('header__logo_for-player');
+
+        // burgerButton.classList.toggle('header-top__burger-button_active');
     });
 
 });
