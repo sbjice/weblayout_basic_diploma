@@ -15,24 +15,24 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        max-width: 1110px;
+        // max-width: 1110px;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         padding: 92px 0;
         background: transparent no-repeat right center / 350px 372px;
         background-image: url("../../img/hero_bg.png");
 
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             margin: 0;
-            padding: 88px 100px;
+            padding: 88px 0;
             background-image: url("../../img/hero_bg_tablet.png");
-            background: transparent no-repeat right 100px center / 256px 262px;
+            background: transparent no-repeat right center / 256px 262px;
         }
 
         @media (max-width: 1020px) {
-            padding: 90px 114px;
+            padding: 90px 0;
             background-image: none;
         }
     }
