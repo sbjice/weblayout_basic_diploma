@@ -15,6 +15,10 @@
         padding: 90px 114px 94px;
     }
 
+    @media (max-width: 766px) {
+        padding: 54px 0;
+    }
+
     background-color: $project-black;
 
     &__content {
@@ -35,6 +39,10 @@
         min-width: 255px;
         max-width: 825px;
         margin-bottom: 50px;
+
+        @media (max-width: 766px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__header {
@@ -46,6 +54,12 @@
         font-weight: 400;
         font-size: 48px;
         line-height: 48px;
+
+        @media (max-width: 766px) {
+            margin-bottom: 12px;
+            font-size: 24px;
+            line-height: 24px;
+        }
     }
 
     &__subtitle {
@@ -57,6 +71,12 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 30px;
+
+        @media (max-width: 766px) {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 21px;
+        }
     }
 
     &__text {
@@ -70,6 +90,11 @@
 
         @media (max-width: 1200px) {
             max-width: 536px;
+        }
+
+        @media (max-width: 766px) {
+            font-size: 14px;
+            line-height: 22px;
         }
     }
 
@@ -95,6 +120,10 @@
             margin-bottom: 20px;
             
         }
+
+        @media (max-width: 766px) {
+            margin-bottom: 0;
+        }
     }
 
 
@@ -115,11 +144,15 @@
 
         @media (max-width: 1200px) {
             grid-template-columns: repeat(3, auto);
-
         }
 
         @media (max-width: 1020px) {
             gap: 25px 32px;
+        }
+
+        @media (max-width: 766px) {
+            gap: 30px 42px;
+            grid-template-columns: repeat(2, auto);
         }
     }
 
@@ -130,6 +163,11 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 16px;
+
+        @media (max-width: 766px) {
+            font-size: 14px;
+            line-height: 15.4px;
+        }
     }
 
     &__guests-list > &__guests-item > &__guest-link_active {
@@ -173,6 +211,13 @@
             background: transparent no-repeat right center / 540px 220px;
             background-image: url("../../img/guests__guest-card-image-mock_768.png");
         }
+
+        @media (max-width: 766px) {
+            align-self: start;
+            min-height: 159px;
+            background: transparent no-repeat left center / contain;
+            background-image: url("../../img/guests__guest-card-image-mock_320.png");
+        }
     }
 
     &__guest-image_one {
@@ -185,6 +230,10 @@
         @media (max-width: 1020px) {
             background-image: url("../../img/guests__guest-card-image_1_768.png");
         }
+
+        @media (max-width: 766px) {
+            background-image: url("../../img/guests__guest-card-image_1_320.png");
+        }
     }
 
 
@@ -194,10 +243,18 @@
         flex-wrap: wrap;
         margin-bottom: 13px;
         gap: 30px;
+        
+        @media (max-width: 766px) {
+            margin-bottom: 12px;
+        }
     }
 
     &__socials-item {
         width: 24px;
+
+        @media (max-width: 766px) {
+            width: 36px;
+        }
     }
 
     &__socials-link {
@@ -206,18 +263,21 @@
         width: 100%;
         height: 100%;
         background: transparent no-repeat right center / 24px 24px;
+
+        @media (max-width: 766px) {
+            max-width: 36px;
+            max-height: 36px;
+            min-width: 36px;
+            min-height: 36px;
+            background: transparent no-repeat right center / 36px 36px;
+        }
     }
 
-    .social-instagram {
-        background-image: url("../../img/social-instagram.svg");
-    }
-
-    .social-facebook {
-        background-image: url("../../img/social-facebook.svg");
-    }
-
-    .social-twitter {
-        background-image: url("../../img/social-twitter.svg");
+    &__socials-link svg {
+        @media (max-width: 766px) {
+            width: 36px;
+            height: 36px;
+        }
     }
 
     &__guest-name {
@@ -248,6 +308,11 @@
         @media (max-width: 1020px) {
             max-width: 396px;
         }
+
+        @media (max-width: 766px) {
+            margin-bottom: 30px;
+            max-width: none;
+        }
     }
 
     &__guest-air-link {
@@ -263,6 +328,12 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
+
+        @media (max-width: 766px) {
+            max-width: 150px;
+            padding: 7.5px 12.5px;
+
+        }
     }
    
 }

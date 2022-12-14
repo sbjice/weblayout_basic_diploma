@@ -6,17 +6,19 @@
 
     @media (max-width: 1350px) {
         max-width: 824px;
-        width: 100%;
+        // max-width: 80.4%;
     }
     
-    @media (max-width: 1020px) {        
+    @media (max-width: 1020px) {      
         max-width: 540px;
+        // max-width: 70.3%;
+    }
+    
+    @media (max-width: 766px) {      
+        max-width: 80%;
+        // max-width: 70.3%;
     }
 
-    // @media (max-width: 650px) {        
-    //     max-width: 100%;
-    // }
-    
 }
 
 .hidden {

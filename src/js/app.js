@@ -36,17 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const podcastsLink = document.querySelector('.podcasts__link');
     const podcastsList = document.querySelector('.podcasts__list');
     const podcastsItems = document.querySelectorAll('.podcasts__item');
+    const podcastsItemsHidden = document.querySelectorAll('.podcasts__item_phone-hidden');
     let copied = false;
+    let shown = false;
 
     podcastsLink.addEventListener('click', event => {
+        event.preventDefault();
+        if (window.screen.width < 766) {
+            if (!shown) {
+                podcastsItemsHidden.forEach(item => {
+                    item.classList.remove('podcasts__item_phone-hidden');
+                });
+                shown = true;
+                return;
+            }
+        }
+        
         if (!copied) {
-            event.preventDefault();
-            podcastsItems.forEach(item=> {
+            podcastsItems.forEach(item => {
                 const elem = item.cloneNode(true);
                 podcastsList.append(elem);
             });
+            copied = true;
         }
-        copied = true;
 
     })
 
@@ -131,5 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // burgerButton.classList.toggle('header-top__burger-button_active');
     });
+
+
 
 });

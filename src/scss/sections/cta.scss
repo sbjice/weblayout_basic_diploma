@@ -15,6 +15,10 @@
         padding: 54px 0 94px;
     }
 
+    @media (max-width: 766px) {
+        padding: 54px 0;
+    }
+
 
     background-color: $light-black;
 
@@ -101,6 +105,11 @@
             background: transparent no-repeat center center / 100% 100%;
             background-image: url("../../img/cta__label.svg");
         }
+
+        @media (max-width: 766px) {
+            width: 62px;
+            height: 62px;
+        }
     }
 
     &__right {
@@ -123,6 +132,11 @@
 
         @media (max-width: 1020px) {
             max-width: 440px;
+        }
+
+        @media (max-width: 766px) {
+            font-size: 24px;
+            line-height: 24px;
         }
     }
 
@@ -154,6 +168,18 @@
             background-image: url("../../img/cta__curve_768.svg");
         }
 
+        @media (max-width: 766px) {
+            left: 0;
+            right: 0;
+            bottom: -22px;
+            width: 254px;
+            height: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            background: transparent no-repeat center center / 254px 10px;
+            background-image: url("../../img/cta__curve_320.png");
+        }
+
     }
 
     &__text {
@@ -172,6 +198,11 @@
         @media (max-width: 1350px) {
             max-width: none;
         }
+
+        @media (max-width: 766px) {
+            font-size: 14px;
+            line-height: 22.4px;
+        }
     }
 
     &__text:nth-of-type(1) {
@@ -186,6 +217,10 @@
     &__text:nth-of-type(2) {
         margin-bottom: 30px;
         max-width: 96%;
+
+        @media (max-width: 766px) {
+            margin-bottom: 12px;
+        }
     }
 
 
@@ -198,6 +233,12 @@
         font-weight: 500;
         font-size: 30px;
         line-height: 30px;
+
+        @media (max-width: 766px) {
+            margin-bottom: 20px;
+            font-size: 24px;
+            line-height: 24px;
+        }
     }
 
     &__shop-link {
@@ -208,6 +249,11 @@
         padding: 23px 12.5px;
         border: 2px solid $promo-color;
         border-radius: 100px;
+
+        @media (max-width: 766px) {
+            max-width: 256px;
+            padding: 15px 14px;
+        }
     }
 
     &__shop-link-icon {
@@ -228,6 +274,11 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+
+        @media (max-width: 766px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
 
    

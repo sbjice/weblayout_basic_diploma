@@ -1,5 +1,6 @@
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
+import pkg from 'gulp-sourcemaps';
 import rename from 'gulp-rename';
 
 import cleanCss from 'gulp-clean-css';
@@ -19,6 +20,7 @@ export const scss = () => {
             })
         ))
         .pipe(app.plugins.replace(/@img\//g, './img/'))
+        .pipe(pkg.init())
         .pipe(sass({
             outputStyle: 'expanded',
         }))
@@ -36,6 +38,7 @@ export const scss = () => {
         .pipe(rename({
             extname: '.min.css',
         }))
+        .pipe(pkg.write('.'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(app.plugins.browserSync.stream());
 }
