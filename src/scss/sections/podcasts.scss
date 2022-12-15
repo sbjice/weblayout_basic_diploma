@@ -85,7 +85,11 @@
     }
 
     &__item_phone-hidden {
-        display: none;
+        
+        @media (max-width: 766px) {
+            display: none;
+            // gap: 29px 30px;
+        }
     }
 
     &__image {

@@ -35,29 +35,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const podcastsLink = document.querySelector('.podcasts__link');
     const podcastsList = document.querySelector('.podcasts__list');
-    const podcastsItems = document.querySelectorAll('.podcasts__item');
-    const podcastsItemsHidden = document.querySelectorAll('.podcasts__item_phone-hidden');
+    let podcastsItems = document.querySelectorAll('.podcasts__item');
+    let podcastsItemsHidden = document.querySelectorAll('.podcasts__item_phone-hidden');
     let copied = false;
     let shown = false;
 
     podcastsLink.addEventListener('click', event => {
         event.preventDefault();
-        if (window.screen.width < 766) {
+        if (window.screen.width < 767) {
             if (!shown) {
+                podcastsItemsHidden = document.querySelectorAll('.podcasts__item_phone-hidden')
                 podcastsItemsHidden.forEach(item => {
                     item.classList.remove('podcasts__item_phone-hidden');
                 });
                 shown = true;
                 return;
             }
-        }
-        
-        if (!copied) {
-            podcastsItems.forEach(item => {
-                const elem = item.cloneNode(true);
-                podcastsList.append(elem);
-            });
-            copied = true;
+            if (!copied) {
+                podcastsItems = document.querySelectorAll('.podcasts__item');
+                podcastsItems.forEach(item => {
+                    const elem = item.cloneNode(true);
+                    podcastsList.append(elem);
+                });
+                copied = true;
+            }
+        } else {
+            if (!copied) {
+                podcastsItems = document.querySelectorAll('.podcasts__item');
+                podcastsItems.forEach(item => {
+                    const elem = item.cloneNode(true);
+                    podcastsList.append(elem);
+                });
+                podcastsItems = document.querySelectorAll('.podcasts__item');
+                    if (podcastsItems.length > 8) {
+                        for (let i = 0; i < podcastsItems.length; i += 1) {
+                            podcastsItems[i].classList.toggle('podcasts__item_phone-hidden', i > 3);
+                        }
+                    }
+                copied = true;
+                if (shown) shown = false;
+                return;
+            }
+            // if (!shown) {
+            //     podcastsItemsHidden = document.querySelectorAll('.podcasts__item_phone-hidden')
+            //     podcastsItemsHidden.forEach(item => {
+            //         item.classList.remove('podcasts__item_phone-hidden');
+            //     });
+            //     shown = true;
+            // }
+
         }
 
     })
