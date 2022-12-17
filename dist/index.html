@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221215162422">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221217151453">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <title>W-Wave Radio</title>
 </head>
@@ -1021,83 +1021,126 @@
     </section>
     <section class="section about">
       <div class="container">
-        <div class="about__content">
-          <div class="about__top">
-            <div class="about__top-left">
-              <h3 class="about__top-header">О нас</h3>
-              <p class="about__top-subtitle">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</p>
-              <p class="about__top-description">Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся! :)</p>
-            </div>
-          </div>
-          <div class="about__middle">
-            <ul class="about__hosts-list">
-              <li class="about__hosts-item">
-                <picture class="about__hosts-picture">
-                  <source srcset="img/about__hosts-image_1.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_1_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_1.png" media="(min-width: 701px)" class="about__hosts-picture-source">
-                  <img src="img/about__hosts-image_1.png" alt="Первая картинка ведущего" class="about__hosts-image">
-                </picture>
-                <p class="about__hosts-name">Дмитрий Гутенберг</p>
-                <p class="about__hosts-description">Эксперт (ну, почти) по всем вопросам (почти).</p>
-              </li>
-              <li class="about__hosts-item">
-                <picture class="about__hosts-picture">
-                  <source srcset="img/about__hosts-image_2.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_2_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_2.png" media="(min-width: 701px)" class="about__hosts-picture-source">
-                  <img src="img/about__hosts-image_2.png" alt="Вторая картинка ведущего" class="about__hosts-image">
-                </picture>
-                <p class="about__hosts-name">Анна Васильева</p>
-                <p class="about__hosts-description">Как я здесь оказалась? А главное — зачем?</p>
-              </li>
-              <li class="about__hosts-item">
-                <picture class="about__hosts-picture">
-                  <source srcset="img/about__hosts-image_3.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_3_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_3.png" media="(min-width: 701px)" class="about__hosts-picture-source">
-                  <img src="img/about__hosts-image_3.png" alt="Третья картинка ведущего" class="about__hosts-image">
-                </picture>
-                <p class="about__hosts-name">Пётр Дмитриевский</p>
-                <p class="about__hosts-description">Господа! Внимание!! Благодарю за внимание!!!</p>
-              </li>
-              <li class="about__hosts-item">
-                <picture class="about__hosts-picture">
-                  <source srcset="img/about__hosts-image_4.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_4_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
-                  <source srcset="img/about__hosts-image_4.png" media="(min-width: 701px)" class="about__hosts-picture-source">
-                  <img src="img/about__hosts-image_4.png" alt="Четвёртая картинка ведущего" class="about__hosts-image">
-                </picture>
-                <p class="about__hosts-name">Татьяна Флеганова</p>
-                <p class="about__hosts-description">Одна я в пальто стою красивая, а вокруг...</p>
-              </li>
-            </ul>
-          </div>
-          <div class="about__bottom">
-            <form action="#" class="about__form">
-              <div class="about__form-top">
-                <textarea name="about__form-textarea" id="" class="about__form-textarea" placeholder="Что скажете?"></textarea>
-              </div>
-              <div class="about__form-middle">
-                <input type="text" name="about__form-name-input" id="" class="about__form-name-input" placeholder="Имя">
-                <input type="email" name="about__form-email-input" id="" class="about__form-email-input" placeholder="E-mail">
-              </div>
-              <div class="about__form-bottom">
-                <button type="submit" class="about__form-button">Отправить</button>
-                <label for="about__form-checkbox" class="about__form-label">
-                  <input type="checkbox" name="about__form-checkbox" id="about__form-checkbox" class="about__form-checkbox">
-                  <span class="about__form-span">
-                    <span class="about__form-span-content"></span>
-                  </span>
-                  <span class="about__form-label-text">Согласен на обработку персональных данных</span>
-                </label>
-              </div>
-            </form>
+        <div class="about__top">
+          <div class="about__top-left">
+            <h3 class="about__top-header">О нас</h3>
+            <p class="about__top-subtitle">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</p>
+            <p class="about__top-description">Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам
+              важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах,
+              подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на
+              наши соцсети в подвале сайта. Спасибо! Услышимся! :)</p>
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="about__middle swiper">
+          <ul class="about__hosts-list swiper-wrapper">
+            <li class="about__hosts-item swiper-slide">
+              <picture class="about__hosts-picture">
+                <source srcset="img/about__hosts-image_1.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_1_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_1.png" media="(min-width: 701px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_1_phone.png" media="(min-width: 301px)" class="about__hosts-picture-source">
+                <img src="img/about__hosts-image_1.png" alt="Первая картинка ведущего" class="about__hosts-image">
+              </picture>
+              <p class="about__hosts-name">Дмитрий Гутенберг</p>
+              <p class="about__hosts-description">Эксперт (ну, почти) по всем вопросам (почти).</p>
+            </li>
+            <li class="about__hosts-item swiper-slide">
+              <picture class="about__hosts-picture">
+                <source srcset="img/about__hosts-image_2.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_2_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_2.png" media="(min-width: 701px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_2_phone.png" media="(min-width: 301px)" class="about__hosts-picture-source">
+                <img src="img/about__hosts-image_2.png" alt="Вторая картинка ведущего" class="about__hosts-image">
+              </picture>
+              <p class="about__hosts-name">Анна Васильева</p>
+              <p class="about__hosts-description">Как я здесь оказалась? А главное — зачем?</p>
+            </li>
+            <li class="about__hosts-item swiper-slide">
+              <picture class="about__hosts-picture">
+                <source srcset="img/about__hosts-image_3.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_3_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_3.png" media="(min-width: 701px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_3_phone.png" media="(min-width: 301px)" class="about__hosts-picture-source">
+                <img src="img/about__hosts-image_3.png" alt="Третья картинка ведущего" class="about__hosts-image">
+              </picture>
+              <p class="about__hosts-name">Пётр Дмитриевский</p>
+              <p class="about__hosts-description">Господа! Внимание!! Благодарю за внимание!!!</p>
+            </li>
+            <li class="about__hosts-item swiper-slide">
+              <picture class="about__hosts-picture">
+                <source srcset="img/about__hosts-image_4.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_4_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_4.png" media="(min-width: 701px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_4_phone.png" media="(min-width: 301px)" class="about__hosts-picture-source">
+                <img src="img/about__hosts-image_4.png" alt="Четвёртая картинка ведущего" class="about__hosts-image">
+              </picture>
+              <p class="about__hosts-name">Татьяна Флеганова</p>
+              <p class="about__hosts-description">Одна я в пальто стою красивая, а вокруг...</p>
+            </li>
+            <li class="about__hosts-item swiper-slide">
+              <picture class="about__hosts-picture">
+                <source srcset="img/about__hosts-image_5.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_5_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_5.png" media="(min-width: 701px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_5_phone.png" media="(min-width: 301px)" class="about__hosts-picture-source">
+                <img src="img/about__hosts-image_5.png" alt="Пятая картинка ведущего" class="about__hosts-image">
+              </picture>
+              <p class="about__hosts-name">Фёдор Прокопьев</p>
+              <p class="about__hosts-description">Привет! Я фотограф, музыкант, ведущий</p>
+            </li>
+            <li class="about__hosts-item swiper-slide">
+              <picture class="about__hosts-picture">
+                <source srcset="img/about__hosts-image_6.png" media="(min-width: 1351px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_6_tablet.png" media="(min-width: 1021px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_6.png" media="(min-width: 701px)" class="about__hosts-picture-source">
+                <source srcset="img/about__hosts-image_6_phone.png" media="(min-width: 301px)" class="about__hosts-picture-source">
+                <img src="img/about__hosts-image_6.png" alt="Шестая картинка ведущего" class="about__hosts-image">
+              </picture>
+              <p class="about__hosts-name">Светлана Кортнева</p>
+              <p class="about__hosts-description">Художник-оформитель. Оформляю.</p>
+            </li>
+          </ul>
+        </div>
+        <a class="about__navigation about__navigation_left swiper-button-prev">
+          <svg class="about__navigation-icon about__navigation-icon_left" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle r="20" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 24 24)" stroke="#A1A6B4" stroke-width="2" />
+            <path d="M26 32L18 24L26 16" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+          </svg>
 
+        </a>
+        <a class="about__navigation about__navigation_right swiper-button-next">
+          <svg class="about__navigation-icon about__navigation-icon_right" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" transform="rotate(-90 24 24)" stroke="#A1A6B4" stroke-width="2" />
+            <path d="M22 32L30 24L22 16" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+          </svg>
 
+        </a>
+      </div>
+      <div class="container">
+        <div class="about__bottom">
+          <form action="#" class="about__form">
+            <div class="about__form-top">
+              <textarea name="about__form-textarea" id="" class="about__form-textarea" placeholder="Что скажете?"></textarea>
+            </div>
+            <div class="about__form-middle">
+              <input type="text" name="about__form-name-input" id="" class="about__form-name-input" placeholder="Имя">
+              <input type="email" name="about__form-email-input" id="" class="about__form-email-input" placeholder="E-mail">
+            </div>
+            <div class="about__form-bottom">
+              <button type="submit" class="about__form-button">Отправить</button>
+              <label for="about__form-checkbox" class="about__form-label">
+                <input type="checkbox" name="about__form-checkbox" id="about__form-checkbox" class="about__form-checkbox">
+                <span class="about__form-span">
+                  <span class="about__form-span-content"></span>
+                </span>
+                <span class="about__form-label-text">Согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -1162,10 +1205,10 @@
     <p class="footer__copyright">W-WAVE ® 2021</p>
 
   </footer>
-  <script defer src="js/choices.min.js?_v=20221215162422"></script>
-  <script defer src="js/jquery.min.js?_v=20221215162422"></script>
-  <script defer src="js/jquery-ui.min.js?_v=20221215162422"></script>
-  <script defer src="js/app.min.js?_v=20221215162422"></script>
+  <script defer src="js/choices.min.js?_v=20221217151453"></script>
+  <script defer src="js/jquery.min.js?_v=20221217151453"></script>
+  <script defer src="js/jquery-ui.min.js?_v=20221217151453"></script>
+  <script defer src="js/app.min.js?_v=20221217151453"></script>
 </body>
 
 </html>

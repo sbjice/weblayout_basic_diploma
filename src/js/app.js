@@ -1,6 +1,8 @@
 // import { sum } from "./modules/functions";
 // console.log('log');
 
+import Swiper from 'swiper/bundle';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const headerSearchButton = document.querySelector(".header__search-button");
@@ -67,11 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     podcastsList.append(elem);
                 });
                 podcastsItems = document.querySelectorAll('.podcasts__item');
-                    if (podcastsItems.length > 8) {
-                        for (let i = 0; i < podcastsItems.length; i += 1) {
-                            podcastsItems[i].classList.toggle('podcasts__item_phone-hidden', i > 3);
-                        }
+                if (podcastsItems.length > 8) {
+                    for (let i = 0; i < podcastsItems.length; i += 1) {
+                        podcastsItems[i].classList.toggle('podcasts__item_phone-hidden', i > 3);
                     }
+                }
                 copied = true;
                 if (shown) shown = false;
                 return;
@@ -142,6 +144,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     guestLinks[5].click();
+
+
+
+    // Секция О нас
+
+    const swiper = new Swiper('.swiper', {
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+
+            // when window width is >= 1349px
+            1349: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+            },
+
+            // when window width is >= 300px
+            765: {
+                spaceBetween: 30,
+            },
+            // when window width is >= 300px
+            300: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        }
+    });
+
 
 
     // Показ/скрытие меню по нажатию на бургер

@@ -1,6 +1,6 @@
 .about {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     width: 100%;
     height: 100%;
@@ -15,7 +15,15 @@
         padding: 90px 0 94px;
     }
 
+    @media (max-width: 766px) { 
+        padding: 54px 0;
+    }
+
     background-color: $project-black;
+
+    & .container:nth-child(2) {
+        position: relative;
+    }
 
     &__content {
         display: flex;
@@ -25,8 +33,8 @@
         width: 100%;
 
         @media (max-width: 1020px) {
-            margin-left: 0;
-            margin-right: 0;
+            // margin-left: 0;
+            // margin-right: 0;
         }
     }
 
@@ -41,6 +49,10 @@
         @media (max-width: 1020px) {
             margin-bottom: 172px;
             flex-direction: column;
+        }
+
+        @media (max-width: 766px) {
+            margin-bottom: 30px;
         }
     }
 
@@ -75,6 +87,11 @@
             background: transparent no-repeat center center / 781px 112px;
             background-image: url(../../img/about__deco_phone.png);
         }
+
+        @media (max-width: 766px) {
+            display: none;
+        }
+
     }
 
     &__top-left {
@@ -91,6 +108,10 @@
             margin-bottom: 31px;
             flex: 1 1 auto;
         }
+
+        @media (max-width: 766px) {
+            margin: 0;
+        }
     }
 
     &__top-header {
@@ -102,6 +123,12 @@
         font-weight: 400;
         font-size: 48px;
         line-height: 48px;
+
+        @media (max-width: 766px) { 
+            margin-bottom: 12px;
+            font-size: 24px;
+            line-height: 24px;
+        }
     }
 
     &__top-subtitle {
@@ -113,6 +140,12 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 30px;
+
+        @media (max-width: 766px) { 
+            margin-bottom: 4px;
+            font-size: 14px;
+            line-height: 21px;
+        }
     }
 
     &__top-description {
@@ -123,74 +156,55 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 160%;
+
+        @media (max-width: 766px) { 
+            font-size: 14px;
+        }
+    }
+
+    @import './restyle/swiper.scss';
+
+    .swiper {
+        position: relative;
+        overflow: hidden;
+    }
+    
+
+    &__navigation {
+        top: 0;
+        position: absolute;
+        height: 100%;
+        padding-top: 103px;
+
+
+        @media (max-width: 766px) {
+            display: none;
+        }
+    }
+
+    &__navigation_left {
+        left: -78px;
+        padding-right: 30px;
+    }
+
+    &__navigation_right {
+        right: -78px;
+        padding-left: 30px;
+    }
+
+    .swiper-slide {
+        // display: none;
+        // visibility: hidden;
+
+    }
+
+    .swiper-slide.swiper-slide-next,
+    .swiper-slide.swiper-slide-active {
+        // display: flex;
+        visibility: visible;
     }
 
 
-
-
-    // &__top-right {
-    //     display: flex;
-    //     flex-direction: row;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     flex: 0 1 40%;
-    //     margin-top: 3px;
-
-    //     @media (max-width: 1350px) {
-    //         flex: 0 1 30%;
-    //         justify-content: center;
-    //         margin: 0;
-    //         height: 100%;
-    //     }
-
-    //     @media (max-width: 1020px) {
-    //         position: relative;
-    //         align-self: flex-end;
-    //         flex: 1 1 auto;
-    //         // margin: 0 114px;
-    //     }
-    // }
-
-    // &__top-spiral {
-    //     width: 162px;
-    //     height: 292px;
-    //     background: transparent no-repeat center center / 162px 292px;
-    //     background-image: url("../../img/about__top-spiral.svg");
-
-    //     @media (max-width: 1350px) {
-    //         display: none;
-    //     }
-
-    //     @media (max-width: 1020px) {
-    //         position: absolute;
-    //         display: inline-flex;
-    //         left: -540%;
-    //         width: 639px;
-    //         height: 112px;
-    //         background: transparent no-repeat left center / 639px 112px;
-    //         transform: scale(1.019, 1.019);
-    //         background-image: url("../../img/about__top-spiral_768.svg");
-    //     }
-    // }
-
-    // &__top-star {
-    //     width: 255px;
-    //     height: 255px;
-    //     background: transparent no-repeat center center / 255px 255px;
-    //     background-image: url("../../img/about__top-star.svg");
-
-    //     @media (max-width: 1350px) {
-    //         align-self: center;
-    //     }
-
-    //     @media (max-width: 1020px) {
-    //         align-self: flex-end;
-    //         width: 112px;
-    //         height: 112px;
-    //         background: transparent no-repeat center center / 112px 112px;
-    //         background-image: url("../../img/about__top-star.svg");
-    //     }
-    // }
 
     &__middle {
         display: flex;
@@ -200,20 +214,13 @@
     &__hosts-list {
         display: flex;
         grid-template-columns: repeat(4, auto);
-
-        gap: 30px;
         margin-bottom: 30px;
         padding: 0;
 
         @media (max-width: 1350px) {   
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-
-            width: 100%;
         }
 
         @media (max-width: 1020px) {   
-            // margin: 0 114px 30px;
         }
     }
 
@@ -233,12 +240,21 @@
         @media (max-width: 1020px) { 
             max-width: 255px;
         }
+
+        @media (max-width: 766px) { 
+            max-width: 113px;
+        }
     }
 
     &__hosts-picture {
         display: flex;
         margin-bottom: 30px;
         width: 100%;
+
+
+        @media (max-width: 766px) {
+            margin-bottom: 12px;
+        }
     }
 
     &__hosts-picture * {
@@ -248,12 +264,20 @@
         @media (max-width: 1350px) {  
             max-width: none;
         }
+
+        @media (max-width: 766px) { 
+            min-height: 113px;
+        }
     }
 
     &__hosts-image {
         @media (max-width: 1350px) {  
             height: 255px;
             width: auto;
+        }
+
+        @media (max-width: 766px) { 
+            height: 113px;
         }
     }
 
@@ -272,6 +296,12 @@
         @media (max-width: 1350px) {   
             max-width: 100%;
         }
+
+        @media (max-width: 766px) {
+            max-width: 100px;
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 
     &__hosts-description {
@@ -286,6 +316,11 @@
 
         @media (max-width: 1350px) {   
             max-width: 100%;
+        }
+
+        @media (max-width: 766px) {
+            font-size: 12px;
+            line-height: 16px;
         }
     }
 
@@ -321,6 +356,16 @@
         border-radius: 30px;
         background-color: transparent;
         color: $white;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+
+
+        @media (max-width: 766px) {
+            padding: 17px 24px;
+            font-size: 16px;
+            line-height: 16px;
+        }
 
     }
 
@@ -331,6 +376,12 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 20px;
+
+
+        @media (max-width: 766px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
 
     &__form-middle {
@@ -357,10 +408,19 @@
         border-radius: 40px;
         background-color: transparent;
         color: $white;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
 
         @media (max-width: 1020px) {
             max-width: none;
+        }
 
+        @media (max-width: 766px) {
+            height: 50px;
+            padding: 17px 24px;
+            font-size: 16px;
+            line-height: 16px;
         }
     }
 
@@ -371,6 +431,12 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 20px;
+
+
+        @media (max-width: 766px) {
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
 
     &__form-bottom {
@@ -391,6 +457,13 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+
+        @media (max-width: 766px) {
+            margin-bottom: 20px;
+            padding: 16px 43.5px;
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
 
     &__form-label {
@@ -404,6 +477,11 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 12px;
+
+        @media (max-width: 766px) {
+            font-size: 9px;
+            line-height: 9px;
+        }
     }
 
     &__form-checkbox {
