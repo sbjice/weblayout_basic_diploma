@@ -39,7 +39,7 @@
                         <source srcset="@img/about__hosts-image_2.png" media="(min-width: 701px)"
                             class="about__hosts-picture-source">
                         <source srcset="@img/about__hosts-image_2_phone.png" media="(min-width: 301px)"
-                                class="about__hosts-picture-source">
+                            class="about__hosts-picture-source">
                         <img src="@img/about__hosts-image_2.png" alt="Вторая картинка ведущего"
                             class="about__hosts-image">
                     </picture>
@@ -55,7 +55,7 @@
                         <source srcset="@img/about__hosts-image_3.png" media="(min-width: 701px)"
                             class="about__hosts-picture-source">
                         <source srcset="@img/about__hosts-image_3_phone.png" media="(min-width: 301px)"
-                                class="about__hosts-picture-source">
+                            class="about__hosts-picture-source">
                         <img src="@img/about__hosts-image_3.png" alt="Третья картинка ведущего"
                             class="about__hosts-image">
                     </picture>
@@ -71,7 +71,7 @@
                         <source srcset="@img/about__hosts-image_4.png" media="(min-width: 701px)"
                             class="about__hosts-picture-source">
                         <source srcset="@img/about__hosts-image_4_phone.png" media="(min-width: 301px)"
-                                class="about__hosts-picture-source">
+                            class="about__hosts-picture-source">
                         <img src="@img/about__hosts-image_4.png" alt="Четвёртая картинка ведущего"
                             class="about__hosts-image">
                     </picture>
@@ -87,7 +87,7 @@
                         <source srcset="@img/about__hosts-image_5.png" media="(min-width: 701px)"
                             class="about__hosts-picture-source">
                         <source srcset="@img/about__hosts-image_5_phone.png" media="(min-width: 301px)"
-                                class="about__hosts-picture-source">
+                            class="about__hosts-picture-source">
                         <img src="@img/about__hosts-image_5.png" alt="Пятая картинка ведущего"
                             class="about__hosts-image">
                     </picture>
@@ -103,7 +103,7 @@
                         <source srcset="@img/about__hosts-image_6.png" media="(min-width: 701px)"
                             class="about__hosts-picture-source">
                         <source srcset="@img/about__hosts-image_6_phone.png" media="(min-width: 301px)"
-                                class="about__hosts-picture-source">
+                            class="about__hosts-picture-source">
                         <img src="@img/about__hosts-image_6.png" alt="Шестая картинка ведущего"
                             class="about__hosts-image">
                     </picture>
@@ -132,27 +132,37 @@
     </div>
     <div class="container">
         <div class="about__bottom">
-            <form action="#" class="about__form">
+            <form id="about__form" action="#" class="about__form" novalidate>
                 <div class="about__form-top">
-                    <textarea name="about__form-textarea" id="" class="about__form-textarea"
+                    <fieldset class="about__form-textarea-fieldset">
+                        <textarea name="about__form-textarea" id="about__form-textarea" class="about__form-textarea"
                         placeholder="Что скажете?"></textarea>
+                    </fieldset>
+
                 </div>
                 <div class="about__form-middle">
-                    <input type="text" name="about__form-name-input" id="" class="about__form-name-input"
-                        placeholder="Имя">
-                    <input type="email" name="about__form-email-input" id="" class="about__form-email-input"
-                        placeholder="E-mail">
+                    <fieldset class="about__form-name-fieldset">
+                        <input type="text" name="about__form-name-input" id="about__form-name-input" class="about__form-name-input"
+                            placeholder="Имя">
+                    </fieldset>
+                    <fieldset class="about__form-email-fieldset">
+                        <input type="email" name="about__form-email-input" id="about__form-email-input" class="about__form-email-input"
+                            placeholder="E-mail">
+                    </fieldset>
                 </div>
                 <div class="about__form-bottom">
                     <button type="submit" class="about__form-button">Отправить</button>
-                    <label for="about__form-checkbox" class="about__form-label">
-                        <input type="checkbox" name="about__form-checkbox" id="about__form-checkbox"
-                            class="about__form-checkbox">
-                        <span class="about__form-span">
-                            <span class="about__form-span-content"></span>
-                        </span>
-                        <span class="about__form-label-text">Согласен на обработку персональных данных</span>
-                    </label>
+                    <fieldset class="about__form-checkbox-fieldset">
+                        <label for="about__form-checkbox" class="about__form-label">
+                            <input type="checkbox" name="about__form-checkbox" id="about__form-checkbox"
+                                class="about__form-checkbox">
+                            <span class="about__form-span">
+                                <span class="about__form-span-content"></span>
+                            </span>
+                            <span class="about__form-label-text">Согласен на обработку персональных данных</span>
+                        </label>
+                    </fieldset>
+
                 </div>
             </form>
         </div>

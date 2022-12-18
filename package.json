@@ -44,6 +44,7 @@
   "dependencies": {
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
+    "just-validate": "^3.10.0",
     "swiper": "^8.4.5"
   }
 }

@@ -2,6 +2,7 @@
 // console.log('log');
 
 import Swiper from 'swiper/bundle';
+import JustValidate from 'just-validate';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -78,17 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (shown) shown = false;
                 return;
             }
-            // if (!shown) {
-            //     podcastsItemsHidden = document.querySelectorAll('.podcasts__item_phone-hidden')
-            //     podcastsItemsHidden.forEach(item => {
-            //         item.classList.remove('podcasts__item_phone-hidden');
-            //     });
-            //     shown = true;
-            // }
-
         }
-
-    })
+    });
 
 
 
@@ -150,14 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Секция О нас
 
     const swiper = new Swiper('.swiper', {
-
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-
             // when window width is >= 1349px
             1349: {
                 slidesPerView: 'auto',
@@ -176,30 +166,79 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const validation = new JustValidate('#about__form', {
+        errorFieldCssClass: 'input-error',
+    });
+
+
+    validation
+        .addField('#about__form-textarea', [{
+                rule: 'required',
+                errorMessage: 'Введите текст',
+            }
+        ])
+        .addField('#about__form-name-input', [{
+                rule: 'required',
+                errorMessage: 'Введите имя',
+            }
+        ])
+        .addField('#about__form-email-input', [{
+                rule: 'required',
+                errorMessage: 'Введите email',
+            },
+            {
+                rule: 'email',
+                errorMessage: 'Некорректный email',
+            },
+        ])
+        .addField('#about__form-checkbox', [{
+                rule: 'required',
+                errorMessage: 'Необходимо согласие на обработку данных',
+            }
+        ])
+
+
+
 
 
     // Показ/скрытие меню по нажатию на бургер
     const burgerButton = document.querySelector('.header__burger-button');
-    const headerTopNavList = document.querySelector('.header__nav-list-top');
-    const headerBottomNavList = document.querySelector('.header__nav-list-bottom');
+    const headerMenu = document.querySelector('.header__menu');
+    const heaerMenuCloseButton = document.querySelector('.header__menu-close-button');
+    const body = document.body;
 
     burgerButton.addEventListener('click', (e) => {
         e.preventDefault();
-        headerTopNavList.classList.toggle('header__nav-list-top_visible');
-        headerBottomNavList.classList.toggle('header__nav-list-bottom_visible');
-        burgerButton.classList.toggle('header__burger-button_active');
+        headerMenu.classList.toggle('header__menu_visible', true);
+        body.classList.toggle('no-overflow', true);
     });
 
-    const playerButton = document.querySelector('.header__links-mock');
-    const playerList = document.querySelector('.header__links-list');
-    const logo = document.querySelector('.header__logo');
+    heaerMenuCloseButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        headerMenu.classList.toggle('header__menu_visible', false);
+        body.classList.toggle('no-overflow', false);
+    });
 
-    console.log(playerList);
+    addEventListener("resize", (e) => {
+        if (screen.width > 1020) {
+            headerMenu.classList.toggle('header__menu_visible', false);
+            body.classList.toggle('no-overflow', false);
+
+        }
+    });
+
+    const playerButton = document.querySelector('.header__links-link');
+    const playerList = document.querySelector('.header__links-list');
+    const headerBottom = document.querySelector('.header__nav-bottom');
+
+    // console.log(playerList);
     playerButton.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log('player button clicked');
+        // console.log('player button clicked');
         playerList.classList.toggle('header__links-list_visible');
-        logo.classList.toggle('header__logo_for-player');
+        headerBottom.classList.toggle('header__nav-bottom_gray');
+
+        playerButton.classList.toggle('header__links-link_open');
 
         // burgerButton.classList.toggle('header-top__burger-button_active');
     });

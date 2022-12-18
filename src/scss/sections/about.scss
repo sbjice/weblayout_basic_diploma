@@ -192,18 +192,6 @@
         padding-left: 30px;
     }
 
-    .swiper-slide {
-        // display: none;
-        // visibility: hidden;
-
-    }
-
-    .swiper-slide.swiper-slide-next,
-    .swiper-slide.swiper-slide-active {
-        // display: flex;
-        visibility: visible;
-    }
-
 
 
     &__middle {
@@ -243,6 +231,13 @@
 
         @media (max-width: 766px) { 
             max-width: 113px;
+        }
+    }
+
+    &__hosts-item {
+
+        @media (max-width: 1350px) { 
+            width: 100% !important;
         }
     }
 
@@ -340,6 +335,17 @@
         min-height: 395px;
     }
 
+    & fieldset {
+        position: relative;
+        margin: 0;
+        max-width: none;
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+
+
+
     &__form-top {
         margin-bottom: 30px;
     }
@@ -399,6 +405,37 @@
         }
     }
 
+
+
+    &__form-name-label,
+    &__form-email-label {
+        display: none;
+        position: absolute;
+        color: $red;
+        top: 10px;
+        left: 34px;
+
+        @media (max-width: 766px) {
+            top: 5px;
+            left: 25px;
+        }
+    }
+
+    & .just-validate-error-label {
+        position: absolute;
+        font-family: 'Muller';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        top: 10px;
+        left: 34px;
+
+        @media (max-width: 766px) {
+            top: 5px;
+            left: 25px;
+        }
+    }
+
     &__form-name-input, &__form-email-input {
         max-width: 445px;
         width: 100%;
@@ -422,6 +459,10 @@
             font-size: 16px;
             line-height: 16px;
         }
+    }
+
+    .input-error {
+        border: 1px solid $red;
     }
 
     &__form-name-input::placeholder, &__form-email-input::placeholder {
@@ -527,6 +568,21 @@
         margin: 0;
         display: flex;
         align-items: center;
+    }
+
+    &__form-bottom &__form-checkbox-fieldset .just-validate-error-label {
+        top: unset;
+        left: 22px;
+        bottom: -15px;
+
+
+        @media (max-width: 766px) {
+            font-size: 9px;
+            line-height: 9px;
+            top: unset;
+            left: 22px;
+            bottom: -15px;
+        }
     }
 
 }
