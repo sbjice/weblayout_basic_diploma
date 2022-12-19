@@ -6,6 +6,57 @@ import JustValidate from 'just-validate';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const body = document.body;
+
+    // Настройка модального окна
+
+    // Настройка валидации формы    
+
+    const modalValidation = new JustValidate('#modal__form', {
+        errorFieldCssClass: 'input-error',
+    });
+
+
+    modalValidation
+        .addField('#modal__form-login-input', [{
+                rule: 'required',
+                errorMessage: 'Введите логин',
+            }
+        ])
+        .addField('#modal__form-password-input', [{
+                rule: 'required',
+                errorMessage: 'Введите пароль',
+            }
+        ]);
+
+
+
+    const headerButton = document.querySelector('.header__button');
+    const modalCloseButton = document.querySelector('.modal__close');
+    const modal = document.querySelector('.modal');
+    const overlay = document.querySelector('.overlay');
+
+    headerButton.addEventListener('click', () => {
+        overlay.classList.add('overlay_shown');
+        body.classList.add('no-scroll');
+    });
+
+    modalCloseButton.addEventListener('click', () => {
+        overlay.classList.remove('overlay_shown');
+        body.classList.remove('no-scroll');
+    });
+
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('overlay_shown');
+        body.classList.remove('no-scroll');
+    });
+
+    modal.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    
+
     const headerSearchButton = document.querySelector(".header__search-button");
     const headerSearchInput = document.querySelector(".header__search-input");
     headerSearchButton.addEventListener('click', function (event) {
@@ -205,18 +256,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerButton = document.querySelector('.header__burger-button');
     const headerMenu = document.querySelector('.header__menu');
     const heaerMenuCloseButton = document.querySelector('.header__menu-close-button');
-    const body = document.body;
+
 
     burgerButton.addEventListener('click', (e) => {
         e.preventDefault();
         headerMenu.classList.toggle('header__menu_visible', true);
-        body.classList.toggle('no-overflow', true);
+        body.classList.toggle('no-scroll', true);
     });
 
     heaerMenuCloseButton.addEventListener('click', (e) => {
         e.preventDefault();
         headerMenu.classList.toggle('header__menu_visible', false);
-        body.classList.toggle('no-overflow', false);
+        body.classList.toggle('no-scroll', false);
     });
 
     addEventListener("resize", (e) => {
