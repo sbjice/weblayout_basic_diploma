@@ -231,16 +231,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerList = document.querySelector('.header__links-list');
     const headerBottom = document.querySelector('.header__nav-bottom');
 
-    // console.log(playerList);
     playerButton.addEventListener('click', (e) => {
         e.preventDefault();
-        // console.log('player button clicked');
         playerList.classList.toggle('header__links-list_visible');
         headerBottom.classList.toggle('header__nav-bottom_gray');
-
         playerButton.classList.toggle('header__links-link_open');
-
-        // burgerButton.classList.toggle('header-top__burger-button_active');
     });
 
 

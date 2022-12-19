@@ -248,9 +248,8 @@
 
     &__search-form {
         position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        // display: flex;
+        display: inline-block;
         margin-right: 24px;
 
         @media (max-width: 1350px) {
@@ -264,7 +263,10 @@
         }
 
         @media (max-width: 766px) {
+            display: flex;
             justify-content: end;
+            flex-direction: row;
+            align-items: center;
             
             width: 50%;
             margin-left: 0;
@@ -276,7 +278,7 @@
         position: absolute;
         top: 0;
         right: 50px;
-        display: none;
+        // display: none;
         width: 0;
         height: 24px;
         // bottom: none;
@@ -305,6 +307,7 @@
     }
 
     &__search-input_visible {
+        // display: inline-flex;
         opacity: 1;
         width: 278px;
     }
@@ -780,10 +783,9 @@
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
-            justify-items: flex-start;
             gap: 40px 48px;
             margin-bottom: 24px;
-            max-height: 140px;
+            height: 140px;
         }
     }
 
