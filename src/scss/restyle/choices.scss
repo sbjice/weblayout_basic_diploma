@@ -20,7 +20,23 @@
     background-color: $light-color;
     border-radius: 10px;
     border: 1px solid $light-color;
+    transition: background-color .3s ease-in-out,
+                border-color .3s ease-in-out;
 }
+
+.choices__inner:hover {
+    background-color: $input-light;
+    border-color: $input-light;
+}
+
+.choices.is-focused .choices__inner {
+    border-color: $primary;
+} 
+
+.choices__inner:active {
+    background-color: $input-dark;
+    border-color: $input-dark;
+} 
 
 .choices.is-flipped .choices__inner {
     border-radius: 10px;
@@ -84,4 +100,23 @@
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.choices__item {
+    transition: background-color .3s ease-in-out, 
+                border-color .3s ease-in-out;
+}
+
+.choices__item.is-highlighted {
+    background-color: $input-light;
+
+}
+
+.choices__item.is-selected {
+    background-color: $primary-light;
+    border-color: $input-dark;
+}
+
+.choices__item:active {
+    background-color: $input-dark;
 }

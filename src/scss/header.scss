@@ -82,15 +82,15 @@
         }
     }
 
-    &__logo_for-player {
-        @media (max-width: 1020px) {
-            order: -2;
-            width: 20%;
-            display: inline-flex;
-            margin-right: auto;
-        }
+    // &__logo_for-player {
+    //     @media (max-width: 1020px) {
+    //         order: -2;
+    //         width: 20%;
+    //         display: inline-flex;
+    //         margin-right: auto;
+    //     }
 
-    }
+    // }
 
     &__hr {
         width: 100%;
@@ -164,7 +164,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        // justify-content: space-between;
         max-width: 57%;
         margin-right: 80px;
         width: 100%;
@@ -241,10 +240,27 @@
 
 
     &__nav-link {
+        transition: color .3s ease-in-out,
+                    background-color .3s ease-in-out;
         @media (max-width: 766px) {
             overflow-wrap: anywhere;
         }
     }
+
+    &__nav-link:hover {
+        color: $primary;
+    } 
+
+    &__nav-link:focus {
+        outline: none;
+        color: $white;
+        background-color: $primary-light;
+    } 
+
+    &__nav-link:active {
+        color: $primary-dark;
+        background-color: transparent;
+    } 
 
     &__search-form {
         position: relative;
@@ -321,6 +337,29 @@
         }
     }
 
+    &__search-button svg path {
+        transition: stroke .3s ease-in-out;
+    }
+
+    &__search-button:hover svg path {
+        stroke: $primary-light;
+    } 
+
+    &__search-button:focus {
+        outline: none;
+    } 
+    &__search-button:focus svg path {
+        stroke: $primary-light;
+    }
+
+    &__search-button:active svg path {
+        stroke: $primary-dark;
+    } 
+
+    &__search-button_opened svg path {
+        stroke: $primary;
+    }
+
     &__button {
         display: inline-flex;
         max-width: 105px;
@@ -328,6 +367,8 @@
         padding: 10px 31px;
         border: 2px solid $project-black;
         border-radius: 77px;
+        transition: background-color .3s ease-in-out,
+                    border-color .3s ease-in-out;
 
 
         @media (max-width: 1350px) {
@@ -356,8 +397,34 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
+        transition: color .3s ease-in-out;
     }
 
+    &__button:hover  {
+        background-color: $project-black;
+    }
+
+    &__button:hover &__button-text {
+        color: $white;
+    }
+
+    &__button:focus  {
+        outline: none;
+        background-color: $primary-light;
+    }
+
+    &__button:focus &__button-text {
+        color: $project-black;
+    }
+
+    &__button:active  {
+        background-color: $primary;
+        border-color: $primary;
+    }
+
+    &__button:active &__button-text {
+        color: $white;
+    }
 
     &__hr_middle {
         @media (max-width: 1350px) {
@@ -593,9 +660,6 @@
     &__button_bottom {
         display: flex;
         align-items: center;
-        // width: 175px;
-        // max-width: 175px;
-        // width: 100%;
         padding: 0 0 0 9px;
 
         @media (max-width: 1350px) {
@@ -628,13 +692,41 @@
         width: 20px;
         margin-right: 9px;
         margin-left: 1px;
-        background: transparent no-repeat center center / cover;
-        background-image: url("../img/header-bottom__play.svg");
 
         @media (max-width: 766px) {
             margin-right: 0;
             margin-bottom: 8px;
         }
+    }
+
+    &__play_playing_hidden {
+        display: none;
+    }
+
+    &__play_paused {
+        display: none;
+    }
+
+    &__play_paused_shown {
+        display: inline-flex;
+    }
+
+    &__button_bottom &__play svg path {
+        transition: fill .3s ease-in-out;
+    }
+
+    &__button_bottom:focus {
+        outline: none;
+    }
+
+
+    &__button_bottom:hover &__play svg path,
+    &__button_bottom:active &__play svg path {
+        fill: $primary;
+    }
+
+    &__button_bottom:focus &__play svg path {
+        fill: $primary-light;
     }
 
     &__info-time,

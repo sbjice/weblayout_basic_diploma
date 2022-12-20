@@ -31,17 +31,27 @@
                     </li>
                     <li class="header__nav-item"><a tabindex="0" href="#" class="header__nav-link">О&nbsp;нас</a></li>
                 </ul>
-                
+
                 <form class="header__search-form">
                     <input tabindex="-1" type="text" name="header__search-input" id="header__search-input"
                         class="header__search-input header__search-input_hidden" placeholder="Поиск по сайту">
-                    <a tabindex="0" href="#" class="header__search-button"><img src="@img/header__search-button.svg"
-                            alt="Кнопка поиска" class="search-img"></a>
+                    <a tabindex="0" href="#" class="header__search-button">
+                        <!-- <img src="@img/header__search-button.svg"
+                            alt="Кнопка поиска" class="search-img"> -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </a>
                 </form>
                 <a tabindex="0" href="#" class="header__button">
                     <p class="header__button-text">Вход</p>
                 </a>
-            
+
             </div>
         </div>
     </nav>
@@ -78,12 +88,26 @@
                             </clipPath>
                         </defs>
                     </svg>
-    
+
                 </a>
                 <ul class="header__links-list">
                     <li class="header__links-item">
                         <a tabindex="0" href="#" class="header__button_bottom">
-                            <div class="header__play"></div>
+                            <div class="header__play">
+                                <svg class="header__play_playing" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+                                        fill="#A1A6B4" />
+                                </svg>
+                                <svg class="header__play_paused" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0Z" fill="#A1A6B4"/>
+                                    <rect x="7" y="6" width="2" height="8" rx="1" fill="white"/>
+                                    <rect x="11" y="6" width="2" height="8" rx="1" fill="white"/>
+
+                                </svg>
+                            </div>
                             <div class="header__info">
                                 <p class="header__info-time">Ранее в эфире</p>
                                 <p class="header__info-name">«Музыка»</p>
@@ -92,7 +116,20 @@
                     </li>
                     <li class="header__links-item">
                         <a tabindex="0" href="#" class="header__button_bottom">
-                            <div class="header__play"></div>
+                            <div class="header__play">
+                                <svg class="header__play_playing" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+                                        fill="#A1A6B4" />
+                                </svg>
+                                <svg class="header__play_paused" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0Z" fill="#A1A6B4"/>
+                                    <rect x="7" y="6" width="2" height="8" rx="1" fill="white"/>
+                                    <rect x="11" y="6" width="2" height="8" rx="1" fill="white"/>
+                                </svg>
+                            </div>
                             <div class="header__info">
                                 <p class="header__info-time">Сейчас в эфире</p>
                                 <p class="header__info-name">«Как так?»</p>
@@ -114,9 +151,11 @@
             <div class="container">
                 <a href="#" tabindex="-1" class="header__menu-close-button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="4.5752" y="2.95406" width="24" height="3" rx="1.5" transform="rotate(45 4.5752 2.95406)" fill="#6D31EE"/>
-                        <rect x="21.5459" y="5.07538" width="24" height="3" rx="1.5" transform="rotate(135 21.5459 5.07538)" fill="#6D31EE"/>
-                        </svg>                        
+                        <rect x="4.5752" y="2.95406" width="24" height="3" rx="1.5"
+                            transform="rotate(45 4.5752 2.95406)" fill="#6D31EE" />
+                        <rect x="21.5459" y="5.07538" width="24" height="3" rx="1.5"
+                            transform="rotate(135 21.5459 5.07538)" fill="#6D31EE" />
+                    </svg>
                 </a>
             </div>
         </div>
@@ -131,19 +170,25 @@
                     </li>
                     <li class="header__menu-top-item"><a tabindex="0" href="#" class="header__nav-link">Плейлисты</a>
                     </li>
-                    <li class="header__menu-top-item"><a tabindex="0" href="#" class="header__nav-link">О&nbsp;нас</a></li>
+                    <li class="header__menu-top-item"><a tabindex="0" href="#" class="header__nav-link">О&nbsp;нас</a>
+                    </li>
                 </ul>
             </div>
         </nav>
         <nav class="header__menu-bottom">
             <div class="container">
                 <ul class="header__menu-bottom-list">
-                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Новости</a></li>
-                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Блоги</a></li>
+                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Новости</a>
+                    </li>
+                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Блоги</a>
+                    </li>
                     <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Топы</a></li>
-                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Опросы</a></li>
-                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Рейтинги</a></li>
-                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Реклама</a></li>
+                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Опросы</a>
+                    </li>
+                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Рейтинги</a>
+                    </li>
+                    <li class="header__menu-bottom-item"><a tabindex="0" href="#" class="header__nav-link">Реклама</a>
+                    </li>
                 </ul>
             </div>
         </nav>

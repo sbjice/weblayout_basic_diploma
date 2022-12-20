@@ -136,55 +136,6 @@
         }
     }
 
-    // &__genres-item:nth-child(1) {
-    //     @media (max-width: 1350px) {
-    //         order: 1;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(5) {
-    //     @media (max-width: 1350px) {
-    //         order: 2;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(2) {
-    //     @media (max-width: 1350px) {
-    //         order: 3;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(6) {
-    //     @media (max-width: 1350px) {
-    //         order: 4;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(3) {
-    //     @media (max-width: 1350px) {
-    //         order: 5;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(7) {
-    //     @media (max-width: 1350px) {
-    //         order: 6;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(4) {
-    //     @media (max-width: 1350px) {
-    //         order: 7;
-    //     }
-    // }
-
-    // &__genres-item:nth-child(8) {
-    //     @media (max-width: 1350px) {
-    //         order: 8;
-    //     }
-    // }
-
-
     &__genres-radio {
         position: absolute;
         min-width: 26px;
@@ -198,6 +149,7 @@
         }
     }
 
+
     &__genres-radio-visual {
         min-width: 26px;
         min-height: 26px;
@@ -210,6 +162,10 @@
         @media (max-width: 766px) {
             display: none;
         }
+    }
+
+    &__genres-radio:focus ~ &__genres-radio-visual {
+        border-color: red;
     }
 
     &__genres-radio:checked ~ &__genres-radio-visual {
@@ -367,6 +323,26 @@
         }
     }
 
+    &__playlist-link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-width: 160px;
+
+        @media (max-width: 1350px) {
+            flex-direction: row;
+            max-width: 255px;
+            max-height: 112px;
+            width: 100%;
+        }
+             
+        @media (max-width: 766px) {
+            flex-direction: column;
+            max-width: none;
+            max-height: none;
+        }
+    }
+
     &__playlist-item {
         display: flex;
         flex-direction: column;
@@ -385,6 +361,10 @@
             max-width: none;
             max-height: none;
         }
+    }
+
+    &__playlist-item:focus-within &__playlist-image {
+        filter: brightness(30%);
     }
 
 

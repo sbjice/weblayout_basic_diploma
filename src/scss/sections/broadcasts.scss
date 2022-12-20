@@ -219,6 +219,7 @@
         padding: 9px 43px;
         border: 2px solid $project-black;
         border-radius: 77px;
+        transition: background-color .3s ease-in-out;
 
         @media (max-width: 1020px) {
             grid-row: 1;
@@ -238,8 +239,6 @@
         height: 18px;
         min-width: 18px;
         margin-right: 4px;
-        background: transparent no-repeat center center / cover;
-        background-image: url("../../img/broadcasts__link-icon.svg");
 
         @media (max-width: 766px) {
             display: none;
@@ -256,6 +255,33 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
+    }
+
+    &__link:hover {
+        outline: none;
+        background-color: $primary-light;
+    }
+
+    &__link:focus {
+        outline: none;
+        background-color: $primary-dark;
+    }
+    &__link:focus &__link-text {
+        color: $white;
+    }
+    &__link:focus svg path {
+        stroke: $white;
+    }
+
+    &__link:active {
+        outline: none;
+        background-color: $project-black;
+    }
+    &__link:active &__link-text {
+        color: $white;
+    }
+    &__link:active svg path {
+        stroke: $white;
     }
 
     &__description {
@@ -330,6 +356,8 @@
         width: 100%;
         min-height: 140px;
         background-color: $white;
+        outline-offset: 7px;
+        transition: filter .3s ease-in-out;
 
         @media (max-width: 1020px) {
             max-width: none;
@@ -349,6 +377,7 @@
         max-width: 255px;
         width: 100%;
         min-height: 148px;
+        transition: filter .3s ease-in-out;
 
         @media (max-width: 766px) {
             max-width: none;
@@ -443,6 +472,7 @@
         align-items: center;
         margin: 0;
         margin-top: auto;
+        transition: background-color .3s ease-in-out;
     }
 
     &__item-link-text {
@@ -453,6 +483,7 @@
         font-size: 16px;
         line-height: 16px;
         color: $project-black;
+        transition: color .3s ease-in-out;
 
         @media (max-width: 766px) {
             font-size: 12px;
@@ -462,7 +493,53 @@
     }
 
     &__item-link svg path {
+        transition: fill .3s ease-in-out;
+
+        @media (max-width: 766px) {
+            fill: $primary;
+        }
+    }
+
+    &__item:hover &__item-link-text {
+        color: $primary;
+    }
+    &__item:hover &__item-link svg path {
         fill: $primary;
+    }
+    &__item:hover &__item-image {
+        // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        filter: brightness(70%);
+
+    }
+
+    &__item:focus-within {
+        outline: 1px solid $primary;
+    }
+    &__item:focus-within &__item-link {
+        background-color: $primary-light;
+    }
+    &__item:focus-within &__item-link-text {
+        color: $white;
+    }
+    &__item:focus-within &__item-link svg path {
+        fill: $white;
+    }
+
+    &__item:active {
+        outline: none;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    &__item:active &__item-image {
+        filter: brightness(70%);
+    }
+    &__item:active &__item-link {
+        background-color: transparent;
+    }
+    &__item:active &__item-link-text {
+        color: $primary-dark;
+    }
+    &__item:active &__item-link svg path {
+        fill: $primary-dark;
     }
 
     // &__item-link-arrow {

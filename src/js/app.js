@@ -1,4 +1,4 @@
-// import { sum } from "./modules/functions";
+// import { sum } from './modules/functions';
 // console.log('log');
 
 import Swiper from 'swiper/bundle';
@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalValidation
         .addField('#modal__form-login-input', [{
-                rule: 'required',
-                errorMessage: 'Введите логин',
-            }
-        ])
+            rule: 'required',
+            errorMessage: 'Введите логин',
+        }])
         .addField('#modal__form-password-input', [{
-                rule: 'required',
-                errorMessage: 'Введите пароль',
-            }
-        ]);
+            rule: 'required',
+            errorMessage: 'Введите пароль',
+        }]);
 
 
+    // Настройка хедера
 
+    // Открытие/закрытие модального окна
     const headerButton = document.querySelector('.header__button');
     const modalCloseButton = document.querySelector('.modal__close');
     const modal = document.querySelector('.modal');
@@ -55,37 +55,103 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
     });
 
-    
 
-    const headerSearchButton = document.querySelector(".header__search-button");
-    const headerSearchInput = document.querySelector(".header__search-input");
+    // Показ/скрытие поля поиска
+    const headerSearchButton = document.querySelector('.header__search-button');
+    const headerSearchInput = document.querySelector('.header__search-input');
     headerSearchButton.addEventListener('click', function (event) {
-        headerSearchInput.classList.toggle("header__search-input_visible");
-        headerSearchInput.classList.toggle("header__search-input_hidden");
+        headerSearchInput.classList.toggle('header__search-input_visible');
+        headerSearchInput.classList.toggle('header__search-input_hidden');
+        headerSearchButton.classList.toggle('header__search-button_opened');
 
     });
 
-    const element = document.querySelector('.broadcasts__select-element');
 
-    const choices = new Choices(element, {
-        searchEnabled: false,
-        itemSelectText: '',
-        shouldSort: false,
-    });
+    // Старт/пауза программ
+    const headerPrograms = document.querySelectorAll('.header__button_bottom');
+    console.log(headerPrograms);
+    headerPrograms.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const playIcon = e.currentTarget.querySelector('.header__play_playing');
+            const pauseIcon = e.currentTarget.querySelector('.header__play_paused');
+            console.log(playIcon, pauseIcon);
 
-    $(function () {
-        $("#accordion").accordion({
-            collapsible: true,
-            header: "a.guests__guests-type-header",
-            heightStyle: "content",
-            create: function (event, ui) {
-                $("#accordionFAQ").attr("tabIndex", "0");
-            }
+
+            playIcon.classList.toggle('header__play_playing_hidden');
+            pauseIcon.classList.toggle('header__play_paused_shown');
         });
-        $("#accordion").accordion("option", "icons", null);
     });
+
 
     //  Секция Подкастов
+
+    // Настройка включения/выключения отдельного подкаста
+
+    let podcastStartButtons = document.querySelectorAll('.podcasts__podcast-play');
+
+    // Функция конфигурирования кнопки
+    // TODO: сделать универсальной с возможностью изменения классов конфигурируемых объектов
+    function configPodcastsPlayButton(e, playClass = 'podcasts__podcast-play-icon',
+        pauseClass = 'podcasts__podcast-play-icon_paused',
+        playHideClass = 'podcasts__podcast-play-icon_hidden',
+        pauseShowClass = 'podcasts__podcast-play-icon_paused_shown') {
+        e.preventDefault();
+        const playIcon = e.currentTarget.querySelector(`.${playClass}`);
+        const pauseIcon = e.currentTarget.querySelector(`.${pauseClass}`);
+
+        playIcon.classList.toggle(`${playHideClass}`);
+        pauseIcon.classList.toggle(`${pauseShowClass}`);
+    }
+
+    podcastStartButtons.forEach(btn => {
+        btn.addEventListener('click', configPodcastsPlayButton);
+    });
+
+
+    function configPodcastLikeButton(e) {
+        e.preventDefault();
+        e.currentTarget.classList.toggle('podcasts__podcast-likes_active');
+    }
+
+    let podcastLikeButtons = document.querySelectorAll('.podcasts__podcast-likes');
+    podcastLikeButtons.forEach(btn => {
+        btn.addEventListener('click', configPodcastLikeButton);
+    });
+
+    function configPodcastShareButton(e) {
+        e.preventDefault();
+        e.currentTarget.classList.toggle('podcasts__podcast-shares_active');
+    }
+
+    let podcastShareButtons = document.querySelectorAll('.podcasts__podcast-shares');
+    podcastShareButtons.forEach(btn => {
+        btn.addEventListener('click', configPodcastShareButton);
+    });
+
+
+    function reconfigStatsButtons() {
+        podcastStartButtons = document.querySelectorAll('.podcasts__podcast-play');
+        podcastStartButtons.forEach(btn => {
+            btn.removeEventListener('click', configPodcastsPlayButton);
+            btn.addEventListener('click', configPodcastsPlayButton);
+        });
+
+        podcastLikeButtons = document.querySelectorAll('.podcasts__podcast-likes');
+        podcastLikeButtons.forEach(btn => {
+            btn.removeEventListener('click', configPodcastLikeButton);
+            btn.addEventListener('click', configPodcastLikeButton);
+        });
+
+        podcastShareButtons = document.querySelectorAll('.podcasts__podcast-shares');
+        podcastShareButtons.forEach(btn => {
+            btn.removeEventListener('click', configPodcastShareButton);
+            btn.addEventListener('click', configPodcastShareButton);
+        });
+    }
+
+
+    // Настройка кнопки "подгрузки подкастов"
 
     const podcastsLink = document.querySelector('.podcasts__link');
     const podcastsList = document.querySelector('.podcasts__list');
@@ -111,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const elem = item.cloneNode(true);
                     podcastsList.append(elem);
                 });
+
+                reconfigStatsButtons();
                 copied = true;
             }
         } else {
@@ -126,12 +194,40 @@ document.addEventListener('DOMContentLoaded', () => {
                         podcastsItems[i].classList.toggle('podcasts__item_phone-hidden', i > 3);
                     }
                 }
+
+                reconfigStatsButtons();
                 copied = true;
                 if (shown) shown = false;
                 return;
             }
         }
     });
+
+
+
+
+    // Настройка селекта в Программах
+    const element = document.querySelector('.broadcasts__select-element');
+
+    const choices = new Choices(element, {
+        searchEnabled: false,
+        itemSelectText: '',
+        shouldSort: false,
+    });
+
+    $(function () {
+        $('#accordion').accordion({
+            collapsible: true,
+            header: 'a.guests__guests-type-header',
+            heightStyle: 'content',
+            create: function (event, ui) {
+                $('#accordionFAQ').attr('tabIndex', '0');
+            }
+        });
+        $('#accordion').accordion('option', 'icons', null);
+    });
+
+
 
 
 
@@ -224,15 +320,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     validation
         .addField('#about__form-textarea', [{
-                rule: 'required',
-                errorMessage: 'Введите текст',
-            }
-        ])
+            rule: 'required',
+            errorMessage: 'Введите текст',
+        }])
         .addField('#about__form-name-input', [{
-                rule: 'required',
-                errorMessage: 'Введите имя',
-            }
-        ])
+            rule: 'required',
+            errorMessage: 'Введите имя',
+        }])
         .addField('#about__form-email-input', [{
                 rule: 'required',
                 errorMessage: 'Введите email',
@@ -243,10 +337,9 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         ])
         .addField('#about__form-checkbox', [{
-                rule: 'required',
-                errorMessage: 'Необходимо согласие на обработку данных',
-            }
-        ])
+            rule: 'required',
+            errorMessage: 'Необходимо согласие на обработку данных',
+        }])
 
 
 
@@ -270,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle('no-scroll', false);
     });
 
-    addEventListener("resize", (e) => {
+    addEventListener('resize', (e) => {
         if (screen.width > 1020) {
             headerMenu.classList.toggle('header__menu_visible', false);
             body.classList.toggle('no-overflow', false);

@@ -15,10 +15,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        // max-width: 1110px;
         width: 100%;
-        // margin-left: auto;
-        // margin-right: auto;
         padding: 92px 0;
         background: transparent no-repeat right center / 350px 372px;
         background-image: url("../../img/hero_bg.png");
@@ -111,26 +108,81 @@
 
     &__content-link {
         color: $primary;
+        text-underline-offset: 4px;
+        text-decoration: underline solid transparent;
+        transition: color .3s ease-in-out,
+                    text-decoration-color .3s ease-in-out,
+                    background-color .3s ease-in-out;
     }
 
-    &__content-button {
-        max-width: 245px;
-        padding: 25px 54px;
-        border-radius: 40px;
+    &__content-link:hover {
+        text-decoration-color: $primary;
+    }
+
+    &__content-link:focus {
+        outline: none;
+        text-decoration-color: transparent;
+        background-color: $primary-light;
         color: $white;
+    }
+
+    &__content-link:active {
+        outline: none;
+        text-decoration-color: $primary-dark;
+        background-color: transparent;
+        color: $primary-dark;
+    }
+
+
+
+    &__content-button {
+        display: flex;
+        align-items: center;
+        max-width: 245px;
+        padding: 24px 53px;
+        border-radius: 40px;
         background-color: $primary;
+        border: 2px solid $primary;
+
+        transition: border-color .3s ease-in-out,
+                    background-color .3s ease-in-out;
+
+        @media (max-width: 766px) { 
+            max-width: 200px;
+            padding: 17px 45px;
+        }
+    }
+
+    &__content-button-text {
+        margin: 0;
         font-family: 'Muller';
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+        color: $white;
+
 
         @media (max-width: 766px) { 
-            max-width: 200px;
-            padding: 17px 45px;
             font-weight: 500;
             font-size: 16px;
             line-height: 16px;
         }
+    }
+
+    &__content-button:hover {
+        border-color: $primary-light;
+        background-color: $primary-light;
+    }
+
+    &__content-button:focus {
+        border-color: $primary-dark;
+        background-color: $primary-light;
+    }
+
+    &__content-button:active {
+        border-color: $primary-dark;
+        background-color: $primary-dark;
+        
     }
 }
