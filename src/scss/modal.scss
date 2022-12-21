@@ -66,6 +66,27 @@
         }
     }
 
+    &__close circle, 
+    &__close path {
+        transition: stroke .3s ease-in-out;
+    }
+
+    &__close:hover circle, 
+    &__close:hover path {
+        stroke: $primary;
+    }
+
+    &__close:focus circle, 
+    &__close:focus path {
+        stroke: $primary-light;
+    }
+
+    &__close:active circle, 
+    &__close:active path {
+        stroke: $primary-dark;
+    }
+
+
     &__header {
         margin-bottom: 17px;
         font-weight: 400;
@@ -116,11 +137,34 @@
         font-size: 20px;
         line-height: 20px;
         color: $primary;
+        text-underline-offset: 4px;
+        text-decoration: underline solid transparent;
+        transition: color .3s ease-in-out,
+                    text-decoration-color .3s ease-in-out,
+                    background-color .3s ease-in-out;
 
         @media (max-width: 766px) { 
             font-size: 12px;
             line-height: 4px;
         }
+    }
+
+    &__disclaimer-link:hover {
+        text-decoration-color: $primary;
+    }
+
+    &__disclaimer-link:focus {
+        outline: none;
+        text-decoration-color: transparent;
+        background-color: $primary-light;
+        color: $white;
+    }
+
+    &__disclaimer-link:active {
+        outline: none;
+        text-decoration-color: $primary-dark;
+        background-color: transparent;
+        color: $primary-dark;
     }
 
     &__form {
@@ -278,6 +322,39 @@
         @media (max-width: 766px) {
             gap: 48px;
         }
+    }
+
+
+
+    
+    &__bottom-link svg rect {
+        transition: fill .3s ease-in-out;
+    }
+
+    &__bottom-link:hover svg rect {
+        fill: $primary;
+    }
+    &__bottom-link:focus svg rect {
+        fill: $primary-light;
+    }
+    &__bottom-link:active svg rect {
+        fill: $primary-dark;
+    }
+
+
+
+    &__bottom-link_fb svg path {
+        transition: fill .3s ease-in-out;
+    }
+
+    &__bottom-link_fb:hover svg path {
+        fill: $primary;
+    }
+    &__bottom-link_fb:focus svg path {
+        fill: $primary-light;
+    }
+    &__bottom-link_fb:active svg path {
+        fill: $primary-dark;
     }
 
 
