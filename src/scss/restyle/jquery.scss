@@ -34,6 +34,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    transition: background-color .3s ease-in-out;
 
     @media (max-width: 766px) {
         padding: 17.5px 0;
@@ -80,6 +81,48 @@
         background: transparent no-repeat right center / 30px 30px;
     }
 }
+
+&__guests-type-header-icon circle,
+&__guests-type-header-icon path {
+    transition: stroke .3s ease-in-out;
+}
+
+&__guests-type-header.ui-state-hover &__guests-type-header-text {
+    color: $primary-light;
+}
+&__guests-type-header.ui-state-hover &__guests-type-header-icon circle {
+    stroke: $primary-light;
+}
+&__guests-type-header.ui-state-hover &__guests-type-header-icon path {
+    stroke: $primary-light;
+}
+
+&__guests-type-header.ui-state-focus {
+    background-color: $light-black;
+}
+&__guests-type-header.ui-state-focus &__guests-type-header-text {
+    color: $white;
+}
+&__guests-type-header.ui-state-focus &__guests-type-header-icon circle {
+    stroke: $text-gray;
+}
+&__guests-type-header.ui-state-focus &__guests-type-header-icon path {
+    stroke: $text-gray;
+}
+
+// &__guests-type-header.ui-state-focus {
+//     background-color: transparent;
+// }
+// &__guests-type-header.ui-accordion-header-active &__guests-type-header-text {
+//     color: $primary-dark;
+// }
+// &__guests-type-header.ui-state-focus &__guests-type-header-icon circle {
+//     stroke: $primary-light;
+//     fill: $primary-light
+// }
+// &__guests-type-header.ui-state-focus &__guests-type-header-icon path {
+//     stroke: $white;
+// }
 
 &__guests-type-header.ui-accordion-header-active > &__guests-type-header-icon {
     transform: rotate(180deg);

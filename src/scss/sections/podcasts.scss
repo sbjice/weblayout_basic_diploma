@@ -74,6 +74,7 @@
         min-height: 140px;
         margin-bottom: 0;
         background-color: $white;
+        transition: filter .3s ease-in-out;
 
         @media (max-width: 1020px) {
             flex: 1 1 100%;

@@ -126,6 +126,10 @@
         }
     }
 
+    &__guests-type-header-text {
+        transition: color .3s ease-in-out;
+    }
+
 
     @import '../restyle/jquery.scss';
 
@@ -163,11 +167,30 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 16px;
+        text-decoration: underline solid transparent;
+        text-underline-offset: 5px;
+        transition: color .3s ease-in-out,
+                    text-decoration-color .3s ease-in-out;
 
         @media (max-width: 766px) {
             font-size: 14px;
             line-height: 15.4px;
         }
+    }
+
+    &__guests-item &__guest-link:hover {
+        color: $primary;
+        text-decoration-color: $primary;
+    }
+
+    &__guests-item &__guest-link:focus {
+        color: $primary-light;
+        text-decoration-color: $primary-light;
+    }
+
+    &__guests-item &__guest-link:active {
+        color: $primary-dark;
+        text-decoration-color: $primary-dark;
     }
 
     &__guests-list > &__guests-item > &__guest-link_active {
@@ -280,6 +303,22 @@
         }
     }
 
+    &__socials-link svg path {
+        transition: fill .3s ease-in-out;
+    }
+
+    &__socials-link:hover svg path {
+        fill: $primary;
+    }
+
+    &__socials-link:focus svg path {
+        fill: $primary-light;
+    }
+
+    &__socials-link:active svg path {
+        fill: $primary-dark;
+    }
+
     &__guest-name {
         margin: 0;
         margin-bottom: 8px;
@@ -328,12 +367,33 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
+        transition: border-color .3s ease-in-out, 
+                    background-color .3s ease-in-out,
+                    color .3s ease-in-out;
 
         @media (max-width: 766px) {
             max-width: 150px;
             padding: 7.5px 12.5px;
 
         }
+    }
+
+    &__guest-air-link:hover {
+        border-color: $primary-light; 
+        background-color: $primary-light;
+        color: $white;
+    }
+
+    &__guest-air-link:focus {
+        border-color: $primary; 
+        background-color: $primary;
+        color: $white;
+    }
+
+    &__guest-air-link:active {
+        border-color: $primary-dark; 
+        background-color: $primary-dark;
+        color: $white;
     }
    
 }

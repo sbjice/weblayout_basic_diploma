@@ -100,30 +100,30 @@
     &__socials-link {
         height: 24px;
         width: 24px;
-        background: transparent no-repeat right center / 24px 24px;
 
         @media (max-width: 1020px) {
             height: 36px;
             width: 36px;
-            background: transparent no-repeat right center / 36px 36px;
         }
     }
 
-    .social-youtube {
-        background-image: url("../../img/social-youtube.svg");
+
+    &__socials-link svg path {
+        transition: fill .3s ease-in-out;
     }
 
-    .social-instagram {
-        background-image: url("../../img/social-instagram.svg");
+    &__socials-link:hover svg path {
+        fill: $primary;
     }
 
-    .social-facebook {
-        background-image: url("../../img/social-facebook.svg");
+    &__socials-link:focus svg path {
+        fill: $primary-light;
     }
 
-    .social-twitter {
-        background-image: url("../../img/social-twitter.svg");
+    &__socials-link:active svg path {
+        fill: $primary-dark;
     }
+
 
     &__right {
         display: flex;
@@ -242,7 +242,27 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 16px;
+        text-decoration: underline solid transparent;
+        text-underline-offset: 5px;
+        transition: color .3s ease-in-out,
+                    text-decoration-color .3s ease-in-out;
     }
+
+    &__links-link:hover {
+        color: $primary;
+        text-decoration-color: $primary;
+    }
+
+    &__links-link:focus {
+        color: $primary-light;
+        text-decoration-color: $primary-light;
+    }
+
+    &__links-link:active {
+        color: $primary-dark;
+        text-decoration-color: $primary-dark;
+    }
+
 
 
 
