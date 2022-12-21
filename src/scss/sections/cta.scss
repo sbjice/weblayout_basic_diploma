@@ -123,7 +123,7 @@
         position: relative;
         margin: 0;
         margin-bottom: 38px;
-        color: $promo-color;
+        color: $golden-light;
         font-family: 'Muller';
         font-style: normal;
         font-weight: 400;
@@ -210,7 +210,7 @@
     }
 
     &__text-link {
-        color: $promo-color;
+        color: $golden-light;
         font-weight: 500;
     }
 
@@ -247,8 +247,10 @@
         align-items: center;
         max-width: 302px;
         padding: 23px 12.5px;
-        border: 2px solid $promo-color;
+        border: 2px solid $golden-light;
         border-radius: 100px;
+        transition: border-color .3s ease-in-out,
+                    background-color .3s ease-in-out;
 
         @media (max-width: 766px) {
             max-width: 256px;
@@ -260,25 +262,68 @@
         width: 20px;
         height: 20px;
         margin-right: 8px;
-        background: transparent no-repeat center center / 20px 20px;
-        background-image: url("../../img/cta__shop-link-icon.svg");
+    }
+
+    &__shop-link-icon path {
+        transition: fill .3s ease-in-out;
     }
 
     &__shop-link-text {
         overflow-wrap: anywhere;
         margin: 0;
         max-width: 245px;
-        color: $promo-color;
+        color: $golden-light;
         font-family: 'Muller';
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+        transition: color .3s ease-in-out;
 
         @media (max-width: 766px) {
             font-size: 16px;
             line-height: 16px;
         }
+    }
+
+    &__shop-link:hover {
+       background-color: $golden-light; 
+    }
+    &__shop-link:hover &__shop-link-icon path:nth-child(1) {
+        fill: $project-black; 
+    }
+    &__shop-link:hover &__shop-link-icon path:nth-child(2) {
+        fill: $golden-light; 
+    }
+    &__shop-link:hover &__shop-link-text {
+        color: $project-black; 
+    }
+
+    &__shop-link:focus {
+        background-color: $golden-dark; 
+     }
+    //  &__shop-link:focus &__shop-link-icon path:nth-child(1) {
+    //      fill: $project-black; 
+    //  }
+    //  &__shop-link:focus &__shop-link-icon path:nth-child(2) {
+    //      fill: $golden-light; 
+    //  }
+    &__shop-link:focus &__shop-link-text {
+        color: $project-black; 
+    }
+
+     &__shop-link:active {
+         background-color: $golden-dark; 
+         border-color: $golden-dark;
+    }
+    &__shop-link:active &__shop-link-icon path:nth-child(1) {
+        fill: $project-black; 
+    }
+    &__shop-link:active &__shop-link-icon path:nth-child(2) {
+        fill: $golden-dark; 
+    }
+    &__shop-link:active &__shop-link-text {
+        color: $project-black; 
     }
 
    

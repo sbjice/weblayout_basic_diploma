@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221221125812">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221221150653">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <title>W-Wave Radio</title>
 </head>
@@ -30,10 +30,10 @@
 
       <form id="modal__form" action="#" class="modal__form" novalidate>
         <fieldset class="modal__form-fieldset">
-          <input type="text" name="modal__form-login-input" id="modal__form-login-input" class="modal__form-login-input" placeholder="Логин">
+          <input type="text" name="modal__form-login-input" id="modal__form-login-input" class="modal__form-login-input form__text" placeholder="Логин">
         </fieldset>
         <fieldset class="modal__form-fieldset">
-          <input type="password" name="modal__form-password-input" id="modal__form-password-input" class="modal__form-password-input" placeholder="Пароль">
+          <input type="password" name="modal__form-password-input" id="modal__form-password-input" class="modal__form-password-input form__text" placeholder="Пароль">
         </fieldset>
 
         <button type="submit" class="modal__form-button">Войти</button>
@@ -1271,14 +1271,28 @@
             <h3 class="cta__header">Будь с нами на одной волне!</h3>
             <!-- <div class="cta__curve"></div> -->
             <p class="cta__text">
-              Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на то, что мы только начали свой путь радиовещателей, нам хочется, чтобы вы могли как следует нас расслышать :)
+              Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на то, что мы только
+              начали свой путь радиовещателей, нам хочется, чтобы вы могли как следует нас расслышать :)
             </p>
             <p class="cta__text">
-              Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0 xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60 штук в 3 цветах, но мы активно трудимся над новыми партиями и дизайном. Спешите приобрести!
+              Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0 xm. Тщательный подбор всех делатей,
+              ручная сборка, качественный звук. Пока доступно только 60 штук в 3 цветах, но мы активно трудимся
+              над новыми партиями и дизайном. Спешите приобрести!
             </p>
             <p class="cta__price-text">2800 руб</p>
-            <a href="#" class="cta__shop-link">
-              <div class="cta__shop-link-icon"></div>
+            <a tabindex="0" href="#" class="cta__shop-link">
+              <!-- <div class="cta__shop-link-icon"></div> -->
+              <svg class="cta__shop-link-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24220_1514)">
+                  <path d="M10.5 20C16.0228 20 20.5 15.5228 20.5 9.99998C20.5 4.47714 16.0228 0 10.5 0C4.97724 0 0.5 4.47714 0.5 9.99998C0.5 15.5228 4.97724 20 10.5 20Z" fill="#F0D288" />
+                  <path d="M17.4385 4.54391L13.7295 3.17676L8.3957 10.8637L8.92677 7.3751L6.02058 5.68219L0.67395 12.1141C0.924269 13.3858 1.4102 14.5718 2.08387 15.6239L5.27373 11.7711L4.09993 16.2962L7.73707 17.6271L13.1408 9.8464L11.9569 14.2958L14.9033 16.0179L20.558 10.3174C20.5592 10.2534 20.5599 10.1889 20.5599 10.1246C20.5599 8.78258 20.3017 7.50132 19.8329 6.32896L16.5482 9.6538L17.4385 4.54391Z" fill="#121723" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_24220_1514">
+                    <rect x="0.5" width="20" height="20" rx="10" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
               <p class="cta__shop-link-text">Купить на Яндекс.Маркет</p>
             </a>
           </div>
@@ -1371,14 +1385,14 @@
             </li>
           </ul>
         </div>
-        <a class="about__navigation about__navigation_left swiper-button-prev">
+        <a tabindex="0" href="#" class="about__navigation about__navigation_left swiper-button-prev">
           <svg class="about__navigation-icon about__navigation-icon_left" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle r="20" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 24 24)" stroke="#A1A6B4" stroke-width="2" />
             <path d="M26 32L18 24L26 16" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
           </svg>
 
         </a>
-        <a class="about__navigation about__navigation_right swiper-button-next">
+        <a tabindex="0" href="#" class="about__navigation about__navigation_right swiper-button-next">
           <svg class="about__navigation-icon about__navigation-icon_right" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="20" transform="rotate(-90 24 24)" stroke="#A1A6B4" stroke-width="2" />
             <path d="M22 32L30 24L22 16" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
@@ -1391,16 +1405,16 @@
           <form id="about__form" action="#" class="about__form" novalidate>
             <div class="about__form-top">
               <fieldset class="about__form-textarea-fieldset">
-                <textarea name="about__form-textarea" id="about__form-textarea" class="about__form-textarea" placeholder="Что скажете?"></textarea>
+                <textarea name="about__form-textarea" id="about__form-textarea" class="about__form-textarea form__text" placeholder="Что скажете?"></textarea>
               </fieldset>
 
             </div>
             <div class="about__form-middle">
               <fieldset class="about__form-name-fieldset">
-                <input type="text" name="about__form-name-input" id="about__form-name-input" class="about__form-name-input" placeholder="Имя">
+                <input type="text" name="about__form-name-input" id="about__form-name-input" class="about__form-name-input form__text" placeholder="Имя">
               </fieldset>
               <fieldset class="about__form-email-fieldset">
-                <input type="email" name="about__form-email-input" id="about__form-email-input" class="about__form-email-input" placeholder="E-mail">
+                <input type="email" name="about__form-email-input" id="about__form-email-input" class="about__form-email-input form__text" placeholder="E-mail">
               </fieldset>
             </div>
             <div class="about__form-bottom">
@@ -1499,10 +1513,10 @@
     <p class="footer__copyright">W-WAVE ® 2021</p>
 
   </footer>
-  <script defer src="js/choices.min.js?_v=20221221125812"></script>
-  <script defer src="js/jquery.min.js?_v=20221221125812"></script>
-  <script defer src="js/jquery-ui.min.js?_v=20221221125812"></script>
-  <script defer src="js/app.min.js?_v=20221221125812"></script>
+  <script defer src="js/choices.min.js?_v=20221221150653"></script>
+  <script defer src="js/jquery.min.js?_v=20221221150653"></script>
+  <script defer src="js/jquery-ui.min.js?_v=20221221150653"></script>
+  <script defer src="js/app.min.js?_v=20221221150653"></script>
 </body>
 
 </html>

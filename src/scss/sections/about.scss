@@ -192,6 +192,26 @@
         padding-left: 30px;
     }
 
+    &__navigation svg circle,
+    &__navigation svg path {
+        transition: stroke .3s ease-in-out;
+    }
+
+    &__navigation:hover svg circle,
+    &__navigation:hover svg path {
+        stroke: $primary;
+    }
+
+    &__navigation:focus svg circle,
+    &__navigation:focus svg path {
+        stroke: $primary-light;
+    }
+
+    &__navigation:active svg circle,
+    &__navigation:active svg path {
+        stroke: $primary-dark;
+    }
+
 
 
     &__middle {
@@ -498,6 +518,9 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+        transition: background-color .3s ease-in-out,
+                    border-color .3s ease-in-out;
+        
 
         @media (max-width: 766px) {
             margin-bottom: 20px;
@@ -505,6 +528,21 @@
             font-size: 16px;
             line-height: 16px;
         }
+    }
+
+    &__form-button:hover {
+        border-color: $primary-light;
+        background-color: $primary-light;
+    }
+    &__form-button:focus {
+        outline: none;
+        border-color: $primary-dark;
+        background-color: $primary-light;
+    }
+    &__form-button:active {
+        outline: none;
+        border-color: $primary-dark;
+        background-color: $primary-dark;    
     }
 
     &__form-label {
@@ -583,6 +621,26 @@
             left: 22px;
             bottom: -15px;
         }
+    }
+
+    .form__text {
+        transition: background-color .3s ease-in-out,
+                    border-color .3s ease-in-out;
+    }
+
+    .form__text:hover {
+        outline: none;
+        background-color: $light-black;
+    }
+    .form__text:focus {
+        outline: none;
+        background-color: $light-black;
+        border-color: $primary-light;
+    }
+    .form__text:active {
+        outline: none;
+        background-color: transparent;
+        border-color: $white;
     }
 
 }

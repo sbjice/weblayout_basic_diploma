@@ -216,6 +216,8 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
+        transition: background-color .3s ease-in-out,
+                    border-color .3s ease-in-out;
 
         @media (max-width: 766px) {
             // margin-bottom: 20px;
@@ -224,6 +226,21 @@
             font-size: 16px;
             line-height: 16px;
         }
+    }
+
+    &__form-button:hover {
+        border-color: $primary-light;
+        background-color: $primary-light;
+    }
+    &__form-button:focus {
+        outline: none;
+        border-color: $primary-dark;
+        background-color: $primary-light;
+    }
+    &__form-button:active {
+        outline: none;
+        border-color: $primary-dark;
+        background-color: $primary-dark;    
     }
 
     &__bottom {
@@ -261,6 +278,27 @@
         @media (max-width: 766px) {
             gap: 48px;
         }
+    }
+
+
+    .form__text {
+        transition: background-color .3s ease-in-out,
+                    border-color .3s ease-in-out;
+    }
+
+    .form__text:hover {
+        outline: none;
+        background-color: $light-black;
+    }
+    .form__text:focus {
+        outline: none;
+        background-color: $light-black;
+        border-color: $primary-light;
+    }
+    .form__text:active {
+        outline: none;
+        background-color: transparent;
+        border-color: $white;
     }
 }
 
