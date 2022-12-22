@@ -4,7 +4,20 @@
 import Swiper from 'swiper/bundle';
 import JustValidate from 'just-validate';
 
+const MOBILE_WIDTH = 766;
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    function getWindowWidth () {
+        return Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth,
+          document.body.offsetWidth,
+          document.documentElement.offsetWidth,
+          document.body.clientWidth,
+          document.documentElement.clientWidth
+        );
+      }
 
     const body = document.body;
 
@@ -251,11 +264,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     guestLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
+            event.preventDefault();
             guestLinks.forEach(item => {
                 item.classList.remove('guests__guest-link_active');
             });
             hideElements();
-            event.preventDefault();
             event.currentTarget.classList.add('guests__guest-link_active');
             const path = event.currentTarget.dataset.path;
             // console.log(path);
@@ -265,20 +278,25 @@ document.addEventListener('DOMContentLoaded', () => {
             guestImage.classList.add('guests__guest-image_' + path);
 
             guestNames.forEach(item => {
-                if (item.dataset.target === path) item.classList.remove('hidden')
+                if (item.dataset.target === path) item.classList.remove('hidden');
             });
 
             guestSocials.forEach(item => {
-                if (item.dataset.target === path) item.classList.remove('hidden')
+                if (item.dataset.target === path) item.classList.remove('hidden');
             });
 
             guestDescriptions.forEach(item => {
-                if (item.dataset.target === path) item.classList.remove('hidden')
+                if (item.dataset.target === path) item.classList.remove('hidden');
             });
 
             guestAirLinks.forEach(item => {
-                if (item.dataset.target === path) item.classList.remove('hidden')
+                if (item.dataset.target === path) item.classList.remove('hidden');
             });
+
+            if (getWindowWidth() <= MOBILE_WIDTH) {
+                guestImage.scrollIntoView(true);
+            }
+
         });
     });
 
