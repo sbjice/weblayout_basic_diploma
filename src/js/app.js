@@ -68,18 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Старт/пауза программ
-    const headerPrograms = document.querySelectorAll('.header__button_bottom');
+    const headerPrograms = document.querySelectorAll('.header__links-button');
     console.log(headerPrograms);
     headerPrograms.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const playIcon = e.currentTarget.querySelector('.header__play_playing');
-            const pauseIcon = e.currentTarget.querySelector('.header__play_paused');
+            const playIcon = e.currentTarget.querySelector('.header__play-icon_playing');
+            const pauseIcon = e.currentTarget.querySelector('.header__play-icon_paused');
             console.log(playIcon, pauseIcon);
 
 
-            playIcon.classList.toggle('header__play_playing_hidden');
-            pauseIcon.classList.toggle('header__play_paused_shown');
+            playIcon.classList.toggle('header__play-icon_playing_hidden');
+            pauseIcon.classList.toggle('header__play-icon_paused_shown');
         });
     });
 
@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Функция конфигурирования кнопки
     // TODO: сделать универсальной с возможностью изменения классов конфигурируемых объектов
     function configPodcastsPlayButton(e, playClass = 'podcasts__podcast-play-icon',
-        pauseClass = 'podcasts__podcast-play-icon_paused',
+        pauseClass = 'podcasts__podcast-pause-icon',
         playHideClass = 'podcasts__podcast-play-icon_hidden',
-        pauseShowClass = 'podcasts__podcast-play-icon_paused_shown') {
+        pauseShowClass = 'podcasts__podcast-pause-icon_shown') {
         e.preventDefault();
         const playIcon = e.currentTarget.querySelector(`.${playClass}`);
         const pauseIcon = e.currentTarget.querySelector(`.${pauseClass}`);

@@ -623,21 +623,21 @@
         }
     }
 
-    .form__text {
+    &__form-text {
         transition: background-color .3s ease-in-out,
                     border-color .3s ease-in-out;
     }
 
-    .form__text:hover {
+    &__form-text:hover {
         outline: none;
         background-color: $light-black;
     }
-    .form__text:focus {
+    &__form-text:focus {
         outline: none;
         background-color: $light-black;
         border-color: $primary-light;
     }
-    .form__text:active {
+    &__form-text:active {
         outline: none;
         background-color: transparent;
         border-color: $white;

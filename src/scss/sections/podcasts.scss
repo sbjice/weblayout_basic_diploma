@@ -264,16 +264,16 @@
         display: none;
     }
 
-    &__podcast-play-icon_paused {
+    &__podcast-pause-icon {
         display: none;
     }
 
     &__podcast-play-icon, 
-    &__podcast-play-icon_paused {
+    &__podcast-pause-icon {
         pointer-events: none;
     }
 
-    &__podcast-play-icon_paused_shown {
+    &__podcast-pause-icon_shown {
         display: inline-flex;
     }
 
@@ -422,7 +422,7 @@
         margin-right: 6px;
     }
 
-    &__podcast-likes-icon_active {
+    &__podcast-likes-active-icon {
         display: none;
         pointer-events: none;
         width: 13px;
@@ -430,7 +430,7 @@
         margin-right: 6px;
     }
 
-    &__podcast-shares-icon_active {
+    &__podcast-shares-active-icon {
         display: none;
         pointer-events: none;
         width: 13px;
@@ -445,7 +445,7 @@
     &__podcast-likes_active &__podcast-likes-icon {
         display: none;
     }    
-    &__podcast-likes_active &__podcast-likes-icon_active {
+    &__podcast-likes_active &__podcast-likes-active-icon {
         display: inline-flex;
     }
 
@@ -456,7 +456,7 @@
     &__podcast-shares_active &__podcast-shares-icon {
         display: none;
     }    
-    &__podcast-shares_active &__podcast-shares-icon_active {
+    &__podcast-shares_active &__podcast-shares-active-icon {
         display: inline-flex;
     }
 

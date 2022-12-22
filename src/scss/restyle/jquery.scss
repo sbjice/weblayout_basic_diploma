@@ -61,6 +61,8 @@
 }
 
 &__guests-type-header.ui-accordion-header > &__guests-type-header-text{
+    overflow-wrap: anywhere;
+    max-width: 50%;
     margin: 0;
 }
 

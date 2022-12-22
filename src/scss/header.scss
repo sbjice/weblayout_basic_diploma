@@ -657,7 +657,7 @@
     }
 
 
-    &__button_bottom {
+    &__links-button {
         display: flex;
         align-items: center;
         padding: 0 0 0 9px;
@@ -679,7 +679,7 @@
     }
 
 
-    &__links-item:last-of-type &__button_bottom {
+    &__links-item:last-of-type &__links-button {
         @media (max-width: 766px) {
             padding-left: 35px;
         }
@@ -699,33 +699,33 @@
         }
     }
 
-    &__play_playing_hidden {
+    &__play-icon_playing_hidden {
         display: none;
     }
 
-    &__play_paused {
+    &__play-icon_paused {
         display: none;
     }
 
-    &__play_paused_shown {
+    &__play-icon_paused_shown {
         display: inline-flex;
     }
 
-    &__button_bottom &__play svg path {
+    &__links-button &__play svg path {
         transition: fill .3s ease-in-out;
     }
 
-    &__button_bottom:focus {
+    &__links-button:focus {
         outline: none;
     }
 
 
-    &__button_bottom:hover &__play svg path,
-    &__button_bottom:active &__play svg path {
+    &__links-button:hover &__play svg path,
+    &__links-button:active &__play svg path {
         fill: $primary;
     }
 
-    &__button_bottom:focus &__play svg path {
+    &__links-button:focus &__play svg path {
         fill: $primary-light;
     }
 
