@@ -314,13 +314,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         breakpoints: {
             // when window width is >= 1349px
-            1349: {
+            1351: {
                 slidesPerView: 'auto',
                 spaceBetween: 30,
             },
-
             // when window width is >= 300px
-            765: {
+            767: {
                 spaceBetween: 30,
             },
             // when window width is >= 300px

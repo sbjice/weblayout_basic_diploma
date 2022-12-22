@@ -9,16 +9,17 @@
     background-color: $white;
 
     @media (max-width: 1350px) {
-        padding: 90px 100px;
+        padding: 90px 100px 90px;
+        min-height: 751px;
     }
 
     @media (max-width: 1020px) {
-        padding: 0;
+        flex-direction: column;
+        padding: 90px 0 30px;
     }
 
     @media (max-width: 766px) {
-        flex-direction: column;
-        padding: 54px 0;
+        padding: 54px 0 0;
     }
     
 
@@ -30,8 +31,12 @@
 
         @media (max-width: 1350px) {
             gap: 28px;
-            margin: 90px 0 30px;
             grid-template-rows: repeat(3, auto);
+        }
+
+        @media (max-width: 1020px) {
+            gap: 28px;
+            grid-template-rows: repeat(2, auto);
         }
 
         @media (max-width: 766px) {
@@ -136,6 +141,7 @@
         align-items: flex-start;
         min-width: 255px;
         max-width: 255px;
+        grid-row: 3;
         width: 100%;
 
 
@@ -147,28 +153,21 @@
         }
 
         @media (max-width: 1020px) {
-            margin-top: 0;
-            grid-row: 3;
-            grid-column: 1 / span 2;
-            justify-self: center;
-            max-width: none;
-            padding: 30px 114px 0;
-            align-items: center;
-            border-top: 1px solid $light-color;
-        }
-
-
-        @media (max-width: 766px) {
-            grid-column: 1;
-            padding: 30px 0 0;
+            align-self: center;
             display: none;
+            margin-top: 0;
+            max-width: none;
         }
     }
 
     &__left-bottom_small-shown {
         display: none;
-        @media (max-width: 766px) {
+        @media (max-width: 1020px) {
             display: inline-flex;
+            margin-top: 30px;
+            width: 100%;
+            padding-top: 30px;
+            border-top: 1px solid $light-color;
         }
     }
 
@@ -176,10 +175,11 @@
         @media (max-width: 1020px) {
             display: grid;
             grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
             align-content: start;
             justify-content: start;
             gap: 6px 20px;
-            max-width: none;
+            max-width: 345px;
             width: fit-content;
             margin: 0 auto;
         }
@@ -187,10 +187,63 @@
         @media (max-width: 766px) {
             margin-right: auto;
             margin-left: auto;
+            margin-bottom: 30px;
             // max-width: 255px;
         }
 
     }
+
+    &__left-bottom_small-shown &__description {
+
+        @media (max-width: 1020px) {
+            font-style: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: 766px) {
+            font-style: normal;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+
+    &__left-bottom_small-shown &__left-bottom-box {
+        gap: 7px 19px;
+
+        @media (max-width: 766px) {
+            gap: 7px 13px;
+        }
+    }
+
+    &__left-bottom_small-shown &__mic-image {
+        @media (max-width: 1020px) {
+            width: 70px;
+            height: 96px;
+            background-image: url("../../img/broadcasts__mic-image_768.png");
+        }
+
+        @media (max-width: 766px) {
+            width: 77px;
+            height: 105px;
+            background-image: url("../../img/broadcasts__mic-image_768.png");
+        }
+    }
+
+    &__left-bottom_small-shown &__link {
+        align-items: center;
+        justify-content: center;
+        padding: 8px 43px;
+
+        @media (max-width: 766px) {
+            padding: 8px 28px;
+        }
+    }
+
+    &__left-bottom_small-shown &__link-icon {
+        display: none;
+    }
+
 
     &__mic-image {
         margin-bottom: 24px;
@@ -320,7 +373,7 @@
             grid-row: 2;
             grid-column: 1 / span 2;
             margin: 0 0 30px;
-            // padding: 0;
+            padding-top: 19px;
         }
 
         @media (max-width: 766px) {
@@ -427,6 +480,7 @@
         background-color: $white;
 
         @media (max-width: 766px) {
+            min-height: 99px;
             padding: 10px 10px 12px;
         }
     }
@@ -461,6 +515,7 @@
         color: $text-gray;
 
         @media (max-width: 766px) {
+            margin-bottom: 0;
             font-size: 9px;
             line-height: 9px;
         }
@@ -476,6 +531,11 @@
         max-width: 225px;
         overflow-wrap: anywhere;
         transition: background-color .3s ease-in-out;
+
+        @media (max-width: 766px) {
+            flex-wrap: nowrap;
+            overflow-wrap: normal;
+        }
     }
 
     &__item-link-text {

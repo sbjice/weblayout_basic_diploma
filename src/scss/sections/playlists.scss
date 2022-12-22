@@ -8,7 +8,7 @@
     padding: 92px 0 94px 0;
 
     @media (max-width: 1350px) {
-        padding: 90px 100px;
+        padding: 90px 100px 96px;
     }
 
     @media (max-width: 1020px) {
@@ -26,7 +26,7 @@
         grid-template-columns: 350px auto;
         grid-template-rows: 440px auto;
 
-        gap: 30px;
+        gap: 22px 30px;
         width: 100%;
 
         @media (max-width: 1350px) {
@@ -35,10 +35,14 @@
             gap: 32px;
         }
 
-        @media (max-width: 766px) {
+        @media (max-width: 1020px) {
             display: flex;
-            gap: 0 0;
+            gap: 30px;
             flex-direction: column;
+        }
+
+        @media (max-width: 766px) {
+            gap: 0;
         }
     }
 
@@ -106,7 +110,7 @@
         margin-left: 1px;
 
         @media (max-width: 1350px) {
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: auto 330px;
             gap: 20px 30px;
         }
 
@@ -127,6 +131,54 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    &__genres-item:nth-child(1) {
+        @media (max-width: 1350px) {
+            order: 1;
+        }
+    }
+
+    &__genres-item:nth-child(5) {
+        @media (max-width: 1350px) {
+            order: 2;
+        }
+    }
+
+    &__genres-item:nth-child(2) {
+        @media (max-width: 1350px) {
+            order: 3;
+        }
+    }
+
+    &__genres-item:nth-child(6) {
+        @media (max-width: 1350px) {
+            order: 4;
+        }
+    }
+
+    &__genres-item:nth-child(3) {
+        @media (max-width: 1350px) {
+            order: 5;
+        }
+    }
+
+    &__genres-item:nth-child(7) {
+        @media (max-width: 1350px) {
+            order: 6;
+        }
+    }
+
+    &__genres-item:nth-child(4) {
+        @media (max-width: 1350px) {
+            order: 7;
+        }
+    }
+
+    &__genres-item:nth-child(8) {
+        @media (max-width: 1350px) {
+            order: 8;
+        }
     }
 
 
@@ -193,6 +245,7 @@
     &__genres-label {
         overflow-wrap: anywhere;
         max-width: 300px;
+        width: 100%;
         color: $project-black;
         font-family: 'Muller';
         font-style: normal;
@@ -232,7 +285,7 @@
         align-items: flex-start;
         max-width: 350px;
         width: 100%;
-        padding-top: 28px;
+        padding-top: 37px;
         border-top: 1px solid $shade-gray;
 
         @media (max-width: 1350px) {
@@ -240,15 +293,16 @@
             grid-row: 3;
             grid-column: 1 / span 2;
             max-width: 100%;
-            margin-top: 18px;
+            margin-top: 10px;
         }
 
         @media (max-width: 1020px) {
-            margin-top: 34px;
+            margin-top: 12px;
         }
 
         @media (max-width: 766px) {
             margin-top: 0;
+            padding-top: 27px;
         }
     }
 
@@ -260,6 +314,11 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
+
+        @media (max-width: 1020px) {
+            max-width: 425px;
+        }
+
 
         @media (max-width: 766px) {
             font-size: 12px;
@@ -322,16 +381,21 @@
 
         @media (max-width: 1350px) {
             grid-template-columns: repeat(3, auto);
+            // gap: 16px 35px;
         }  
              
         @media (max-width: 1020px) {
-            grid-template-columns: repeat(2, auto);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // grid-template-columns: repeat(2, auto);
             gap: 27px 30px;
-            margin-top: 20px;
+            margin-top: 23px;
         }
 
         @media (max-width: 766px) {
             margin-top: 0;
+            gap: 31px 30px;
         }
     }
 
@@ -350,10 +414,11 @@
              
         @media (max-width: 766px) {
             flex-direction: column;
-            max-width: none;
+            max-width: 113px;
             // max-height: none;
         }
     }
+
 
     &__playlist-link {
         display: flex;
@@ -536,6 +601,12 @@
         width: 24px;
         height: 20px;
         background: $black no-repeat center center / 16px 12px;
+
+        @media (max-width: 1350px) {
+            right: unset;
+            left: 0;
+        }
+
     }
 
     &__playlist-region_ru {
@@ -563,7 +634,7 @@
 
         @media (max-width: 766px) {
             justify-content: start;
-            padding: 10px;
+            padding: 9px;
         }
     }
 

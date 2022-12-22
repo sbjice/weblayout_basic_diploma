@@ -7,12 +7,12 @@
     min-height: 751px;
     padding: 92px 0;
 
-    @media (max-width: 1200px) {
-        padding: 90px 100px;
+    @media (max-width: 1350px) {
+        padding: 90px 100px 94px;
     }
 
     @media (max-width: 1020px) {
-        padding: 90px 114px 94px;
+        padding: 90px 0 94px;
     }
 
     @media (max-width: 766px) {
@@ -88,7 +88,7 @@
         font-size: 20px;
         line-height: 32px;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             max-width: 536px;
         }
 
@@ -146,8 +146,9 @@
         padding: 0;
         gap: 11px 30px;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             grid-template-columns: repeat(3, auto);
+            gap: 11px 35px;
         }
 
         @media (max-width: 1020px) {
@@ -155,7 +156,7 @@
         }
 
         @media (max-width: 766px) {
-            gap: 30px 42px;
+            gap: 26px 42px;
             grid-template-columns: repeat(2, auto);
         }
     }
@@ -203,7 +204,7 @@
         max-width: 350px;
         width: 100%;
         
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             max-width: 255px;
         }
         
@@ -221,7 +222,7 @@
         background: transparent no-repeat right center / 350px 220px;
         background-image: url("../../img/guests__guest-card-image-mock.png");
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             max-width: 255px;
             min-height: 159px;
             background: transparent no-repeat right center / 255px 159px;
@@ -246,7 +247,7 @@
     &__guest-image_one {
         background-image: url("../../img/guests__guest-card-image_1.png");
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             background-image: url("../../img/guests__guest-card-image_1.png");
         }
 
@@ -264,11 +265,16 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 13px;
+        margin-bottom: 4px;
         gap: 30px;
         
+        @media (max-width: 1350px) {
+            margin-bottom: 6px;
+        }
+        
         @media (max-width: 766px) {
-            margin-bottom: 12px;
+            gap: 21px;
+            margin-bottom: 7px;
         }
     }
 
@@ -340,7 +346,7 @@
         font-size: 16px;
         line-height: 29px;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1350px) {
             max-width: 255px;
         }
 

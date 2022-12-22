@@ -8,15 +8,16 @@
     background-color: $light-color;
 
     @media (max-width: 1350px) {
-        padding: 94px 100px 92px;
+        padding: 90px 100px 93px;
+        min-height: 1044px;
     }
 
     @media (max-width: 1020px) {
-        padding: 90px 0;
+        padding: 90px 0 95px;
     }
 
     @media (max-width: 766px) {
-        padding: 40px 0;
+        padding: 54px 0;
     }
 
 
@@ -43,6 +44,7 @@
         line-height: 48px;
 
         @media (max-width: 766px) {
+            margin-bottom: 20px;
             font-weight: 400;
             font-size: 24px;
             line-height: 24px;
@@ -62,6 +64,7 @@
         }
 
         @media (max-width: 766px) {
+            gap: 30px;
             margin-bottom: 30px;
         }
     }
@@ -235,12 +238,21 @@
 
     &__podcast-play {
         display: inline-flex;
-        display: flex;
+        // display: flex;
         align-self: center;
         width: 48px;
         min-width: 48px;
         height: 48px;
         min-height: 48px;
+
+
+        @media (max-width: 766px) {
+            align-items: center;
+            width: 36px;
+            min-width: 36px;
+            height: 36px;
+            min-height: 36px;
+        }
     }
 
     &__podcast-play-icon circle {
@@ -330,7 +342,7 @@
         line-height: 20px;
 
         @media (max-width: 766px) {
-            margin-bottom: 3px;
+            margin-bottom: 6px;
             font-weight: 400;
             font-size: 16px;
             line-height: 16px;
@@ -589,8 +601,8 @@
 
         @media (max-width: 766px) {
             font-weight: 400;
-            font-size: 12px;
-            line-height: 12px;
+            font-size: 16px;
+            line-height: 16px;
         }
 
     }

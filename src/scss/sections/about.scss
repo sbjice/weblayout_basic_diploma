@@ -47,7 +47,7 @@
         margin-bottom: 30px;
 
         @media (max-width: 1020px) {
-            margin-bottom: 172px;
+            margin-bottom: 143px;
             flex-direction: column;
         }
 
@@ -83,8 +83,8 @@
             height: 112px;
             top: auto;
             bottom: -112px;
-            right: 0;
-            background: transparent no-repeat center center / 781px 112px;
+            right: -63px;
+            background: transparent no-repeat center center / 654px 112px;
             background-image: url(../../img/about__deco_phone.png);
         }
 
@@ -159,6 +159,7 @@
 
         @media (max-width: 766px) { 
             font-size: 14px;
+            line-height: 22px;
         }
     }
 
@@ -185,11 +186,23 @@
     &__navigation_left {
         left: -78px;
         padding-right: 30px;
+
+
+        @media (max-width: 1350px) {
+            left: -68px;
+            padding-right: 20px;
+        }
     }
 
     &__navigation_right {
         right: -78px;
         padding-left: 30px;
+
+
+        @media (max-width: 1350px) {
+            right: -68px;
+            padding-left: 20px;
+        }
     }
 
     &__navigation svg circle,
@@ -225,11 +238,18 @@
         margin-bottom: 30px;
         padding: 0;
 
-        @media (max-width: 1350px) {   
+        @media (max-width: 1350px) {  
+            margin-bottom: 37px; 
         }
 
         @media (max-width: 1020px) {   
+            margin-bottom: 30px;
         }
+
+        @media (max-width: 766px) {   
+            margin-bottom: 12px;
+        }
+
     }
 
     &__hosts-item {
@@ -389,6 +409,7 @@
 
         @media (max-width: 766px) {
             padding: 17px 24px;
+            border-radius: 20px;
             font-size: 16px;
             line-height: 16px;
         }
