@@ -384,6 +384,16 @@
         border: none;
     }
 
+    & &__form-name-fieldset,
+    & &__form-email-fieldset {
+        max-width: 445px;
+
+
+        @media (max-width: 1020px) {
+            max-width: none;
+        }
+    }
+
 
 
     &__form-top {
