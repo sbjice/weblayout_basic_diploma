@@ -8,16 +8,16 @@ const MOBILE_WIDTH = 766;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    function getWindowWidth () {
+    function getWindowWidth() {
         return Math.max(
-          document.body.scrollWidth,
-          document.documentElement.scrollWidth,
-          document.body.offsetWidth,
-          document.documentElement.offsetWidth,
-          document.body.clientWidth,
-          document.documentElement.clientWidth
+            document.body.scrollWidth,
+            document.documentElement.scrollWidth,
+            document.body.offsetWidth,
+            document.documentElement.offsetWidth,
+            document.body.clientWidth,
+            document.documentElement.clientWidth
         );
-      }
+    }
 
     const body = document.body;
 
@@ -311,6 +311,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        a11y: {
+            prevSlideMessage: 'Предыдущий слайд',
+            nextSlideMessage: 'Следующий слайд',
         },
         breakpoints: {
             // when window width is >= 1349px
