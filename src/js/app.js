@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headerSearchInput.classList.toggle('header__search-input_visible');
         headerSearchInput.classList.toggle('header__search-input_hidden');
         headerSearchButton.classList.toggle('header__search-button_opened');
-        headerSearchButton.type = headerSearchButton.type === 'button' ? 'submit' : 'button';
+        // headerSearchButton.type = headerSearchButton.type === 'button' ? 'submit' : 'button';
     });
 
 
