@@ -30,4 +30,20 @@ img {
     display: inline-block;
 }
 
+body {
+    min-width: 320px;
+}
+
+button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+button:focus,
+button:active {
+    outline: none;
+} 
 

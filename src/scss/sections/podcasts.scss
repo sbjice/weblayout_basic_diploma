@@ -632,6 +632,15 @@
         color: $white
     }
 
+    &__link_hidden_big {
+        display: none;
+
+        @media (max-width: 766px) {
+            display: flex;
+        }
+
+    }
+
     // &__link-text {
     //     margin: 0;
     // }

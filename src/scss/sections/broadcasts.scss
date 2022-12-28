@@ -162,12 +162,17 @@
 
     &__left-bottom_small-shown {
         display: none;
+
         @media (max-width: 1020px) {
             display: inline-flex;
             margin-top: 30px;
             width: 100%;
             padding-top: 30px;
             border-top: 1px solid $light-color;
+        }
+
+        @media (max-width: 766px) {
+            margin-top: 0;
         }
     }
 
@@ -402,6 +407,7 @@
     }
 
     &__item {
+        position: relative;
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
@@ -536,6 +542,16 @@
             flex-wrap: nowrap;
             overflow-wrap: normal;
         }
+    }
+
+    &__item-link::after {
+        content: '';
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
     }
 
     &__item-link-text {

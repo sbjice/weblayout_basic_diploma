@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headerSearchInput.classList.toggle('header__search-input_visible');
         headerSearchInput.classList.toggle('header__search-input_hidden');
         headerSearchButton.classList.toggle('header__search-button_opened');
-
+        headerSearchButton.type = headerSearchButton.type === 'button' ? 'submit' : 'button';
     });
 
 
@@ -182,36 +182,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.classList.remove('podcasts__item_phone-hidden');
                 });
                 shown = true;
-                return;
-            }
-            if (!copied) {
-                podcastsItems = document.querySelectorAll('.podcasts__item');
-                podcastsItems.forEach(item => {
-                    const elem = item.cloneNode(true);
-                    podcastsList.append(elem);
-                });
 
-                reconfigStatsButtons();
-                copied = true;
+                podcastsLink.classList.add('hidden');
+                return;
             }
         } else {
             if (!copied) {
                 podcastsItems = document.querySelectorAll('.podcasts__item');
                 podcastsItems.forEach(item => {
-                    const elem = item.cloneNode(true);
-                    podcastsList.append(elem);
+                    item.classList.remove('hidden');
                 });
-                podcastsItems = document.querySelectorAll('.podcasts__item');
-                if (podcastsItems.length > 8) {
-                    for (let i = 0; i < podcastsItems.length; i += 1) {
-                        podcastsItems[i].classList.toggle('podcasts__item_phone-hidden', i > 3);
-                    }
-                }
 
-                reconfigStatsButtons();
+                podcastsLink.classList.add('podcasts__link_hidden_big');
                 copied = true;
-                if (shown) shown = false;
-                return;
+
             }
         }
     });
@@ -226,8 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
         searchEnabled: false,
         itemSelectText: '',
         shouldSort: false,
+        renderSelectedChoices: 'auto'
     });
-
     $(function () {
         $('#accordion').accordion({
             collapsible: true,
@@ -248,7 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //  Секция Гостей
+    const guestImageFirst = document.querySelector('.guests__guest-image');
 
+    const guestImages = document.querySelectorAll('.guests__guest-image');
     const guestLinks = document.querySelectorAll('.guests__guest-link');
     const guestNames = document.querySelectorAll('.guests__guest-name');
     const guestSocials = document.querySelectorAll('.guests__socials-list');
@@ -260,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         guestSocials.forEach(item => item.classList.add('hidden'));
         guestAirLinks.forEach(item => item.classList.add('hidden'));
         guestDescriptions.forEach(item => item.classList.add('hidden'));
+        guestImages.forEach(item => item.classList.add('hidden'));
     }
 
     guestLinks.forEach(function (link) {
@@ -271,11 +258,13 @@ document.addEventListener('DOMContentLoaded', () => {
             hideElements();
             event.currentTarget.classList.add('guests__guest-link_active');
             const path = event.currentTarget.dataset.path;
-            // console.log(path);
+            if (path === undefined) {
+                guestImageFirst.classList.remove('hidden');
+                return;
+            }
 
-            const guestImage = document.querySelector('.guests__guest-image');
-            guestImage.classList = ['guests__guest-image'];
-            guestImage.classList.add('guests__guest-image_' + path);
+            const guestImage = document.querySelector('.guests__guest-image_' + path);
+            guestImage.classList.remove('hidden');
 
             guestNames.forEach(item => {
                 if (item.dataset.target === path) item.classList.remove('hidden');

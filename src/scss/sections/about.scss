@@ -172,11 +172,8 @@
     
 
     &__navigation {
-        top: 0;
+        top: 103px;
         position: absolute;
-        height: 100%;
-        padding-top: 103px;
-
 
         @media (max-width: 766px) {
             display: none;
@@ -376,7 +373,6 @@
     }
 
     & fieldset {
-        position: relative;
         margin: 0;
         max-width: none;
         width: 100%;
@@ -384,8 +380,15 @@
         border: none;
     }
 
+
+    & &__form-textarea-fieldset {
+        position: relative;
+    }
+
     & &__form-name-fieldset,
     & &__form-email-fieldset {
+        width: 100%;
+        position: relative;
         max-width: 445px;
 
 
@@ -401,6 +404,7 @@
     }
 
     &__form-textarea {
+        position: relative;
         resize: none;
         display: flex;
         justify-content: flex-start;
@@ -488,6 +492,7 @@
     }
 
     &__form-name-input, &__form-email-input {
+        position: relative;
         max-width: 445px;
         width: 100%;
         height: 70px;
@@ -574,6 +579,10 @@
         outline: none;
         border-color: $primary-dark;
         background-color: $primary-dark;    
+    }
+
+    &__form-checkbox-fieldset {
+        position: relative;
     }
 
     &__form-label {
